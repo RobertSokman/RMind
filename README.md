@@ -11,3 +11,7 @@ to find icons: https://ionicons.com
 
 to install native-base: npm install native-base --save
 
+NativeBase components: https://docs.nativebase.io/Components.html#Components
+
+
+
