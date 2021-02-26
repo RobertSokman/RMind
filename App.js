@@ -4,5 +4,15 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
 
-import Reminders from './src/screens/Reminders';
+import Reminders from "./src/screens/Reminders/Reminders";
+import Template from "./src/elements/Template";
 
+
+
+export default function App() {
+  return (
+    <View>
+        <Template />
+    </View>
+  );
+}

@@ -1,16 +1,30 @@
 import React from "react";
-import { View, Text } from "react-native";
-import FooterTabsIconExample from "../../elements/Template";
+import { View, Text, StyleSheet } from "react-native";
+import Template from "../../elements/Template";
+import { Dimensions } from 'react-native';
+const windowHeight = Dimensions.get('window').height;
 
 const Reminders = (props) => {
   return (
     <View>
-      <FooterTabsIconExample />
-      <Text>notJust a component</Text>
+      <Template />
+      <Text style={styles.textTest}>This is the Reminders page.</Text>
     </View>
   )
 }
 
 export default Reminders;
+
+
+const styles = StyleSheet.create({
+  textTest: {
+  
+    textAlign: "center",
+    textAlignVertical: "center",
+    top: windowHeight/2,
+
+  },
+});
+
 
 //functional component

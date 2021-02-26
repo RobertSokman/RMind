@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import { Dimensions } from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+
 export default class FooterTabsIconExample extends Component {
   render() {
     return (
       <Container>
-        <Header>
-          <Image
-          style={styles.logo}
-          source={require('./assets/Logo.png')}
-          />
-          
-        </Header>
-        <Content />
-        <Footer>
+        <Footer style={{position: 'absolute', left: 0, right: 0, top: windowHeight-55}}>
           <FooterTab>
             <Button>
               <Icon name="ios-people-outline" />
@@ -21,8 +17,11 @@ export default class FooterTabsIconExample extends Component {
             <Button>
               <Icon name="ios-bar-chart-outline" />
             </Button>
-            <Button active>
-              <Icon active name="alarm-outline" />
+            <Button>
+              <Icon name="home" />
+            </Button>
+            <Button >
+              <Icon name="alarm-outline" />
             </Button>
             <Button>
               <Icon name="settings-outline" />
@@ -34,23 +33,4 @@ export default class FooterTabsIconExample extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    //justifyContent: 'center',
-  },
-  logo: {
-    width: 180,
-    height: 80,
-    marginTop: -15,
-    justifyContent: 'center',
-    //flex: 'flex-start',
-  },
-  header: {
-    //
-    //
-    //
-  },
-});
+//to make button in nav bar active: <Button active> <Icon active name="alarm-outline" />
