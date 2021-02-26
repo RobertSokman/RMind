@@ -11,7 +11,6 @@ export default class FooterTabsIconExample extends Component {
           source={require('./assets/Logo.png')}
           />
           
-
         </Header>
         <Content />
         <Footer>
