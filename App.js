@@ -12,7 +12,7 @@ import Template from "./src/elements/Template";
 export default function App() {
   return (
     <View>
-        <Template />
+        <Template/>
     </View>
   );
 }
