@@ -12,7 +12,7 @@ const SearchButton = (props) => {
             onPress={() => console.warn('SearchButton was clicked')}
         >
             <Fontisto name="search" size={20} color={'white'}/>             
-            <Text>search</Text>
+            <Text style = {styles.text}>search</Text>
         </Pressable>
   )
 }
@@ -20,20 +20,18 @@ const SearchButton = (props) => {
 export default SearchButton;
 
 const styles = StyleSheet.create({
-    textTest: {
+    text: {
       
       textAlign: "center",
       textAlignVertical: "center",
-      marginTop: 130,
-      fontSize: 30,
-      fontWeight: 'bold',
+      fontSize: 15,
     },
     searchButton: {
       flexDirection: 'row', //puts items side by side
       borderRadius: 20, //this command is used to make rounded rectangles
       zIndex: 100, //
       position: 'absolute',
-      backgroundColor: 'gray',
+      backgroundColor: '#f5f5f5',
       flexDirection: 'row',
       justifyContent: 'flex-start',
       alignItems: 'center',
@@ -42,6 +40,8 @@ const styles = StyleSheet.create({
       marginLeft: 10,
       width: windowWidth -20,
       height: 40,
+      borderWidth: 0.25,
+      borderColor: "#a9a9a9"
     },
     
   });

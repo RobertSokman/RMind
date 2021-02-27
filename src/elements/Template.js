@@ -4,7 +4,8 @@ import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'nat
 import FooterTabsIconExample from "./Footer";
 import HeaderLogo from "./Header";
 
-const Template = (props) => {
+
+const Template = () => {
   return (
       <Container>
         <View>

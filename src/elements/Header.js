@@ -5,12 +5,7 @@ export default class HeaderLogo extends Component {
   render() {
     return (
       <Container>
-        <Header>
-          <Image
-          style={styles.logo}
-          source={require('../../assets/Logo.png')}
-          />
-          
+        <Header>          
         </Header>
         
       </Container>

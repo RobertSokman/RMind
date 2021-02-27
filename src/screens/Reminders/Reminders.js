@@ -7,11 +7,12 @@ import SearchButton from "../../elements/SearchButton";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
-const Reminders = (props) => {
+
+const Reminders = () => {
   return (
     <View>
       <Template />
-      <Text style={styles.textTest}>Reminders</Text>
+      
       <SearchButton />
       
     </View>

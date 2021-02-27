@@ -5,6 +5,7 @@ import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+
 export default class FooterTabsIconExample extends Component {
   render() {
     return (
@@ -17,10 +18,10 @@ export default class FooterTabsIconExample extends Component {
             <Button>
               <Icon name="ios-bar-chart-outline" />
             </Button>
-            <Button>
+            <Button >
               <Icon name="home" />
             </Button>
-            <Button >
+            <Button>
               <Icon name="alarm-outline" />
             </Button>
             <Button>
@@ -31,6 +32,6 @@ export default class FooterTabsIconExample extends Component {
       </Container>
     );
   }
-}
+  }
 
 //to make button in nav bar active: <Button active> <Icon active name="alarm-outline" />
