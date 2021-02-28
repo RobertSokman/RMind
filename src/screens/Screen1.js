@@ -4,6 +4,7 @@ import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'nat
 import FooterTabsIconExample from "../elements/Footer";
 import HeaderLogo from "../elements/Header";
 import Template from '../elements/Template';
+import BottomTabNavigator from '../navigation/BottomTabNavigator';
 
 
 const Screen1 = () => {
