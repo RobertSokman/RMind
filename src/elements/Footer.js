@@ -21,7 +21,7 @@ export default class FooterTabsIconExample extends Component {
             <Button >
               <Icon name="home" />
             </Button>
-            <Button>
+            <Button onPress={() => console.warn('SearchButton was clicked')}>
               <Icon name="alarm-outline" />
             </Button>
             <Button>

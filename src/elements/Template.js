@@ -10,7 +10,7 @@ const Template = () => {
       <Container>
         <View>
           <HeaderLogo/>              
-          <FooterTabsIconExample/>
+          
         </View>
       </Container>
   )

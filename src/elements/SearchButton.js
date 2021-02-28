@@ -5,6 +5,7 @@ import Fontisto from "react-native-vector-icons/Fontisto";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
+
 const SearchButton = (props) => {
     return (
         <Pressable 
