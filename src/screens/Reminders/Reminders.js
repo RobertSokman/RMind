@@ -6,16 +6,26 @@ import Fontisto from "react-native-vector-icons/Fontisto";
 import SearchButton from "../../elements/SearchButton";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
-
+import ListDividerExample from "../../elements/AllRemindersList";
+import { Container, Title } from "native-base";
+import SegmentOutsideHeaderExample from "../../elements/RemindersSegment";
 
 const Reminders = () => {
   return (
-    <View>
-      <Template />
-      
-      <SearchButton />
-      
-    </View>
+    <Container>
+      <View>
+        
+        <Template/>
+        <Title style={{marginTop: 50, textAlign: "center"}}>Reminders</Title>
+        <SegmentOutsideHeaderExample />
+        <SearchButton />
+
+        <Text style={{marginTop: 180, position: "absolute"}}>
+          <ListDividerExample />
+        </Text>
+        
+      </View>
+    </Container>
   )
 }
 

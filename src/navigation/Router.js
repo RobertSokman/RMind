@@ -30,7 +30,7 @@ const Router = () => {
                 <Stack.Screen 
                     name={"Reminders screen"}
                     component={ Reminders }
-                    options={{headerShown: false,}}
+                    //options={{headerShown: false,}}
                 />
                 <Stack.Screen 
                     name={"Stocks"}
