@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
 import Reminders from "./src/screens/Reminders/Reminders";
-import Template from "./src/elements/Template";
 import Screen1 from "./src/screens/Screen1";
 import 'react-native-gesture-handler';
 import Router from "./src/navigation/Router";

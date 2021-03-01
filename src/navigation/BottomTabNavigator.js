@@ -4,7 +4,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Reminders from "../screens/Reminders/Reminders";
-import Template from '../elements/Template';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import Screen1 from '../screens/Screen1';
 import { color } from 'react-native-reanimated';

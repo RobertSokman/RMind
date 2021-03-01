@@ -3,10 +3,10 @@ import { Container, Header, Content, List, ListItem, Text } from 'native-base';
 import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-export default class ListDividerExample extends Component {
+export default class Tab2 extends Component {
   render() {
     return (
-      <Container>
+      <Container >
         
         <Content>
           <List style={{width: windowWidth}}>
@@ -40,28 +40,6 @@ export default class ListDividerExample extends Component {
             <ListItem>
               <Text>Bradley Horowitz mortgage payment</Text>
             </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem itemDivider>
-              <Text>Tuesday 2. March</Text>
-            </ListItem>  
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            
           </List>
         </Content>
       </Container>
