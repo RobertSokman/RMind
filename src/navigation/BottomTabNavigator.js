@@ -10,6 +10,8 @@ import { color } from 'react-native-reanimated';
 import Settings from "../screens/Settings/Settings";
 import StockList from "../screens/StockList/StockList";
 import ClientList from "../screens/Client list/ClientList";
+const windowHeight = Dimensions.get('window').height;
+import { Dimensions} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +23,7 @@ const BottomTabNavigator = (props) => {
                 activeTintColor: 'blue',
                 inactiveBackgroundColor: '#f5f5f5',
                 activeBackgroundColor: '#f5f5f5',
-                style: { height: 55},
+                style: { height: windowHeight/12},
                 getLabelText: false,
                 initialRouteName: "Home screen",           
             }}>
