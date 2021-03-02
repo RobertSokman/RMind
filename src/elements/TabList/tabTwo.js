@@ -9,7 +9,7 @@ export default class Tab2 extends Component {
       <Container >
         
         <Content>
-          <List style={{width: windowWidth}}>
+          <List >
             <ListItem itemDivider>
               <Text>Sun 28. Feb</Text>
             </ListItem>                    
