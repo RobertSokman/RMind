@@ -9,6 +9,7 @@ import Security from "../../elements/Security/Security";
 import FullList from "./FullList";
 
 
+
 const StockList = () => {
   return (
     <Container>
@@ -16,8 +17,8 @@ const StockList = () => {
         <Header>
           <Title style={{ textAlign: "center", marginTop:20}}>Stock List page</Title>
         </Header>
-      
-        <SafeAreaView>
+        <SearchButton />
+        <SafeAreaView style={{ marginTop: 90}}>
           <FullList />
         </SafeAreaView>
       
