@@ -1,17 +1,22 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleShee} from "react-native";
 import { Dimensions, Pressable } from 'react-native';
-import { Header, Title } from 'native-base';
+import { Header, Title, Container  } from 'native-base';
+import TabsExample from "../../elements/TabList/ListReminders";
+import SearchButton from "../../elements/SearchButton";
 
 
 const StockList = () => {
   return (
-    <View>
+    <Container>
+      
       <Header>
         <Title style={{ textAlign: "center", marginTop:20}}>Stock List page</Title>
-        
       </Header>
-    </View>
+      <SearchButton/>
+      
+      
+    </Container>
   )
 }
 

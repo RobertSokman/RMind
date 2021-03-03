@@ -13,7 +13,7 @@ const Reminders = () => {
       <Header>
         <Title style={{ textAlign: "center", marginTop:20}}>Reminders</Title>
       </Header>
-      <TabsExample/> 
+      <TabsExample /> 
     </Container>
   )
 }
