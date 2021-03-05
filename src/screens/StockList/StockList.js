@@ -13,12 +13,12 @@ import FullList from "./FullList";
 const StockList = () => {
   return (
     <Container>
-      <View>
+      <View style={{flex: 1}}>
         <Header>
           <Title style={{ textAlign: "center", marginTop:20}}>Stock List page</Title>
         </Header>
         <SearchButton />
-        <SafeAreaView style={{ marginTop: 90}}>
+        <SafeAreaView style={{ marginTop: 55, flex:1}}>
           <FullList />
         </SafeAreaView>
       

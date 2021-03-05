@@ -12,8 +12,7 @@ const SearchButton = (props) => {
             style={styles.searchButton} 
             onPress={() => console.warn('SearchButton was clicked')}
         >
-            <Fontisto name="search" size={20} color={'white'}/>             
-            <Text style = {styles.text}>search</Text>
+            <Fontisto name="search" size={20} color={'black'} style={{marginLeft: 15}}/>             
         </Pressable>
   )
 }
@@ -21,12 +20,7 @@ const SearchButton = (props) => {
 export default SearchButton;
 
 const styles = StyleSheet.create({
-    text: {
-      
-      textAlign: "center",
-      textAlignVertical: "center",
-      fontSize: 15,
-    },
+
     searchButton: {
       flexDirection: 'row', //puts items side by side
       borderRadius: 10, //this command is used to make rounded rectangles

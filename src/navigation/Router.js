@@ -7,6 +7,7 @@ import BottomTabNavigator from "./BottomTabNavigator";
 import Settings from "../screens/Settings/Settings";
 import StockList from "../screens/StockList/StockList";
 import ClientList from "../screens/Client list/ClientList";
+import OneStock from "../screens/OneStock/OneStock";
 
 const Stack = createStackNavigator();
 
@@ -46,7 +47,12 @@ const Router = () => {
                     name={"Clients"}
                     component={ ClientList }
                     options={{headerShown: false,}}
-                />             
+                />
+                <Stack.Screen 
+                    name={"OneStock"}
+                    component={ OneStock }
+                    options={{headerShown: false,}}
+                />              
                
                 
             </Stack.Navigator>

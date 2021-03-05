@@ -19,5 +19,30 @@ export default [
         company: 'Schroder Global Emer Mtks Acc Uts A',
         price: 9,
     },
+    {
+        id: '4',
+        company: 'Schroder Global Emer Mtks Acc Uts A',
+        price: 9,
+    },
+    {
+        id: '5',
+        company: 'Schroder Global Emer Mtks Acc Uts A',
+        price: 9,
+    },
+    {
+        id: '6',
+        company: 'Schroder Global Emer Mtks Acc Uts A',
+        price: 9,
+    },
+    {
+        id: '7',
+        company: 'Schroder Global Emer Mtks Acc Uts A',
+        price: 9,
+    },
+    {
+        id: '8',
+        company: 'Schroder Global Emer Mtks Acc Uts A',
+        price: 910,
+    },
 
   ];
