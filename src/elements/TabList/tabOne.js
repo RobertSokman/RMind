@@ -1,57 +1,28 @@
 import React, { Component } from 'react';
 import { Container, Header, Content, List, ListItem, Text } from 'native-base';
-import { Dimensions } from 'react-native';
+import { Dimensions, View, FlatList } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-export default class Tab1 extends Component {
-  render() {
+import {useNavigation} from '@react-navigation/native';
+import reminders from '../../../assets/data/reminders';
+import Reminder from '../Reminder.js/Reminder';
+
+const TabOne = (props) => {
+  
+    const navigation = useNavigation();
     return (
-    <Container >
-        
-        <Content>
-          <List >
-            <ListItem itemDivider>
-              <Text>Sun 28. Feb</Text>
-            </ListItem>                    
-            <ListItem>
-              <Text>Aaron Bennet mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Ali Connors mortgage payment</Text>
-            </ListItem>
-            <ListItem itemDivider>
-              <Text>Monday 1. March</Text>
-            </ListItem>  
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem itemDivider>
-              <Text>Tuesday 2. March</Text>
-            </ListItem>  
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem itemDivider>
-              <Text>Tuesday 2. March</Text>
-            </ListItem>  
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-            <ListItem>
-              <Text>Bradley Horowitz mortgage payment</Text>
-            </ListItem>
-          </List>
-        </Content>
-    </Container>
-    );
+      <View>
+        <FlatList 
+            data={reminders}
+            renderItem={({item}) => 
+            
+            <Reminder reminder={item}/>
+            
+            }
+          
+        />
+      </View>   
+    ) 
   }
-}
+
+  export default TabOne;

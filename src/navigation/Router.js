@@ -19,39 +19,39 @@ const Router = () => {
             <Stack.Navigator> 
                 <Stack.Screen 
                     
-                    name={"Home screen"}
+                    name={"Back"}
                     component={ BottomTabNavigator }
                     options={{headerShown: false,}}
                 /> 
                  <Stack.Screen 
                     name={"Screen1"}
                     component={ Screen1 }
-                    options={{headerShown: false,}}
+                    options={{headerShown: true,}}
                 /> 
                 <Stack.Screen 
                     name={"Reminders screen"}
                     component={ Reminders }
-                    //options={{headerShown: false,}}
+                    options={{headerShown: true,}}
                 />
                 <Stack.Screen 
                     name={"Stocks"}
                     component={ StockList }
-                    options={{headerShown: false,}}
+                    options={{headerShown: true,}}
                 />
                 <Stack.Screen 
                     name={"Settings"}
                     component={ Settings }
-                    options={{headerShown: false,}}
+                    options={{headerShown: true,}}
                 />  
                 <Stack.Screen 
                     name={"Clients"}
                     component={ ClientList }
-                    options={{headerShown: false,}}
+                    options={{headerShown: true,}}
                 />
                 <Stack.Screen 
-                    name={"OneStock"}
+                    name={"Security"}
                     component={ OneStock }
-                    options={{headerShown: false,}}
+                    options={{headerShown: true,}}
                 />              
                
                 

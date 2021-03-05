@@ -15,7 +15,7 @@ const FullList = (props) => {
             <FlatList 
                 data={securities}
                 renderItem={({item}) => 
-                <Pressable onPress={() => navigation.navigate("OneStock")}>
+                <Pressable onPress={() => navigation.navigate("Security")}>
                     <Security security={item}/>
                 </Pressable>
                 }

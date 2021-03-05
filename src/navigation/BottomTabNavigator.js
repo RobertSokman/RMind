@@ -25,7 +25,7 @@ const BottomTabNavigator = (props) => {
                 activeBackgroundColor: '#f5f5f5',
                 style: { height: windowHeight/12},
                 getLabelText: false,
-                initialRouteName: "Home screen",           
+                initialRouteName: "Screen1",           
             }}>
             <Tab.Screen
                 name={"Clients"} 

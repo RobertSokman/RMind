@@ -1,18 +1,19 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Dimensions, Pressable } from 'react-native';
-import { Header, Title } from 'native-base';
+import { Container, Header, Title } from 'native-base';
 
 
 const ClientList = () => {
   return (
-    <View>
+    <Container>
+      <View>
       <Header>
-        <Title style={{ textAlign: "center", marginTop:20}}>Client List page</Title>
+        <Title style={{ textAlign: "center", marginTop:20}}>Client list</Title>
       </Header>
       
-      
-    </View>
+      </View>
+    </Container>
   )
 }
 

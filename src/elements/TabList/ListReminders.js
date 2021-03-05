@@ -1,21 +1,21 @@
 import React, { Component, View } from 'react';
 import { Container, Header, Content, Tab, Tabs } from 'native-base';
-import Tab1 from './tabOne';
-import Tab2 from './tabTwo';
-import Tab3 from './tabThree';
+import TabOne from './tabOne';
+import TabTwo from './tabTwo';
+import TabThree from './tabThree';
 export default class TabsExample extends Component {
   render() {
     return (
       <Container>
         <Tabs>
           <Tab heading="All" >
-            <Tab1 />
+            <TabOne />
           </Tab>
           <Tab heading="Week">
-            <Tab2 />
+            <TabTwo />
           </Tab>
           <Tab heading="Today">
-            <Tab3 />
+            <TabThree />
           </Tab>
         </Tabs>
       </Container>
