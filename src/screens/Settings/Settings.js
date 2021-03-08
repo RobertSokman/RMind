@@ -7,8 +7,8 @@ import { Header, Title } from 'native-base';
 const Settings = () => {
   return (
     <View>
-      <Header>
-        <Title style={{ textAlign: "center", marginTop:20}}>Settings</Title>
+      <Header style={{height: 44, backgroundColor: 'white'}}>
+        <Title style={{ textAlign: "center", marginTop:10}}>Settings</Title>
       </Header>
       
     </View>

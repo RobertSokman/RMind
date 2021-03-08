@@ -8,8 +8,8 @@ const ClientList = () => {
   return (
     <Container>
       <View>
-      <Header>
-        <Title style={{ textAlign: "center", marginTop:20}}>Client list</Title>
+      <Header style={{height: 44, backgroundColor: 'white'}}>
+        <Title style={{ textAlign: "center", marginTop:10}}>Client list</Title>
       </Header>
       
       </View>

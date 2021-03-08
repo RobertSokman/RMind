@@ -10,8 +10,8 @@ const windowWidth = Dimensions.get('window').width;
 const Reminders = () => {
   return (
     <Container>
-      <Header>
-        <Title style={{ textAlign: "center", marginTop:20}}>Reminders</Title>
+      <Header style={{height: 44, backgroundColor: 'white'}}>
+        <Title style={{ textAlign: "center", marginTop:10}}>Reminders</Title>
       </Header>
       <TabsExample /> 
     </Container>

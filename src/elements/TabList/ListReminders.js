@@ -8,7 +8,7 @@ export default class TabsExample extends Component {
     return (
       <Container>
         <Tabs>
-          <Tab heading="All" >
+          <Tab heading="All">
             <TabOne />
           </Tab>
           <Tab heading="Week">

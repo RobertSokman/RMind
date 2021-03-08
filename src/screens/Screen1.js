@@ -8,7 +8,7 @@ const Screen1 = () => {
   return (
       <Container>
         <View>
-          <Header>
+          <Header style={{height: 44, backgroundColor: 'white'}}>
             <Image
               style={styles.logo}
               source={require('../../assets/Logo.png')}
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       alignSelf: 'center',
       //flex: 'flex-start',
+      marginBottom: 10,
     },
   
   });

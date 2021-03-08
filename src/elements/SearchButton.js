@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
       justifyContent: 'flex-start',
       alignItems: 'center',
       alignContent: 'center',
-      marginTop: 90,
+      marginTop: 68,
       marginLeft: 10,
       width: windowWidth -20,
       height: 40,
