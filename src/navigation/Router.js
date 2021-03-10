@@ -8,6 +8,7 @@ import Settings from "../screens/Settings/Settings";
 import StockList from "../screens/StockList/StockList";
 import ClientList from "../screens/Client list/ClientList";
 import OneStock from "../screens/OneStock/OneStock";
+import AddReminder from '../screens/AddReminder';
 
 const Stack = createStackNavigator();
 
@@ -51,6 +52,11 @@ const Router = () => {
                 <Stack.Screen 
                     name={"Security"}
                     component={ OneStock }
+                    options={{headerShown: true,}}
+                />              
+               <Stack.Screen 
+                    name={"Add Reminder"}
+                    component={ AddReminder }
                     options={{headerShown: true,}}
                 />              
                
