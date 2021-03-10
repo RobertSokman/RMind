@@ -6,6 +6,7 @@ const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 import {useNavigation} from '@react-navigation/native';
 import OneStock from "../OneStock/OneStock";
+import { Item } from "native-base";
 
 const FullList = (props) => {
     const navigation = useNavigation();

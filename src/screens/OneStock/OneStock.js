@@ -7,15 +7,20 @@ import securities from "../../../assets/data/securities";
 import OneSecurity from "../../elements/OneSecurity";
 
 
-const OneStock = () => {
+const OneStock = (props) => {
+  
   return (
+    
     <Container >
+      <View>
         
-          <FlatList data={securities} renderItem={({item}) => 
-              <OneSecurity security={item} />}>
-          </FlatList>
-        
-        
+          <Text style={{textAlign:"center", marginTop: 20, fontSize: 20, fontWeight: "bold"}}>Security name</Text>
+          <Text style={{textAlign:"center", fontSize: 20}}>Security code</Text>
+          <Text style={{textAlign:"center", marginTop: 20, fontSize: 20}}>Price and Currency</Text>
+          <Text style={{textAlign:"center", marginTop: 190, fontSize: 30}}>Price chart</Text>
+          
+          
+      </View>  
        
     </Container>
     

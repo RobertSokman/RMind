@@ -10,7 +10,7 @@ const OneSecurity = (props) => {
       
       <View>
         <Text style={styles.security}>{security.company}</Text>   
-        </View>
+      </View>
     )
   }
   
