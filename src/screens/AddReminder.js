@@ -2,21 +2,27 @@ import React from "react";
 import { View, Text, StyleSheet, Button, FlatList } from "react-native";
 import { Dimensions, Pressable } from 'react-native';
 import { Container, Header, Title } from 'native-base';
+import NewReminder from "../elements/Reminder.js/NewReminder";
+import TaskDescription from "../elements/Reminder.js/NewReminder";
+import DueDate from "../elements/Reminder.js/DueDate";
 
 const AddReminder = (props) => {
   
   return (
     
     <Container >
-      <View>
-        
-          <Text style={{textAlign:"center", marginTop: 20, fontSize: 20, fontWeight: "bold"}}>Add Reminder here</Text>
-          <Text style={{textAlign:"center", fontSize: 20}}>To</Text>
-          <Text style={{textAlign:"center", marginTop: 20, fontSize: 20}}>be</Text>
-          <Text style={{textAlign:"center", marginTop: 190, fontSize: 30}}>continued</Text>
+      <View >
+          <TaskDescription />
+     
+          <DueDate />
+
+          <Pressable onPress={() => console.warn('Button was clicked')} 
+            style={{alignSelf: "center", height: 40, width: 220, backgroundColor: "gray", borderRadius: 12, alignItems: "center", marginTop: 160}}>
+              <Text style={{color: "white"}}>Add new reminder</Text>
+          </Pressable>
+      </View>
           
-          
-      </View>  
+      
        
     </Container>
     
