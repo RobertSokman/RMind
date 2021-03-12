@@ -14,9 +14,9 @@ const OneStock = () => {
   return (
     
     <Container >
-      <View style={{alignItems:"center"}}>
+      <View >
         
-          <OneSecurity name="Security name" code="Security code" price='23'/>
+          <OneSecurity name="Security Name" code="Security code" price='23' currency='GBP'/>
           <LineChart
             data={{
               labels: ["January", "February", "March"],
@@ -36,11 +36,11 @@ const OneStock = () => {
             yAxisSuffix="k"
             
             chartConfig={{
-              backgroundColor: "#e26a00",
-              backgroundGradientFrom: "#fb8c00",
-              backgroundGradientTo: "#ffa726",
-              color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-              labelColor: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+              backgroundColor: "white",
+              backgroundGradientFrom: "white",
+              backgroundGradientTo: "white",
+              color: (opacity = 1) => `rgba(50, 99, 151, ${opacity})`,
+              labelColor: (opacity = 1) => `rgba(25, 25, 25, ${opacity})`,
               style: {
                 borderRadius: 16
               },
@@ -54,7 +54,7 @@ const OneStock = () => {
             style={{
                 marginVertical: 8,
                 borderRadius: 16,
-                marginTop: 160
+                marginTop: 20
             }}
             
           
