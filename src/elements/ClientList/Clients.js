@@ -3,25 +3,16 @@ import {View, Text, Image, StyleSheet, Dimensions, Pressable} from 'react-native
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
-const Clients = (props) => {
-    //const security = props.security;
+const ClientName = (props) => {
+    const client = props.client;
     return (
       <View  >
-          <Pressable 
-            style={{flexDirection: 'row', width: windowWidth/3, backgroundColor: "gray", 
-                    height: windowHeight/4, alignItems: "center", marginLeft: 5, borderRadius: 50}}
-          >
-              <Text style={{textAlign: "center", color: "white", fontSize: 14, fontWeight: "bold"}}>Client Name</Text>
-          </Pressable>
-
-          <Pressable 
-            style={{flexDirection: 'row', width: windowWidth/3, backgroundColor: "gray", 
-                    height: windowHeight/4, alignItems: "center", marginTop: 5, marginLeft: 5, borderRadius: 50}}
-          >
-              <Text style={{textAlign: "center", color: "white", fontSize: 14, fontWeight: "bold"}}>Client Name</Text>
-          </Pressable>
+          
+        <Text style={{textAlign: "center", fontSize: 24, fontWeight: "bold", 
+            backgroundColor: "lightgray", width: windowWidth/2, height: windowHeight/7, marginBottom: 5}}>{client.name}</Text>
+          
       </View>
     )
   }
   
-export default Clients;
+export default ClientName;

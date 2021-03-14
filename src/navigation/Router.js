@@ -9,6 +9,7 @@ import StockList from "../screens/StockList/StockList";
 import ClientList from "../screens/Client list/ClientList";
 import OneStock from "../screens/OneStock/OneStock";
 import AddReminder from '../screens/AddReminder';
+import Profile from '../screens/Profile/Profile';
 
 const Stack = createStackNavigator();
 
@@ -58,7 +59,12 @@ const Router = () => {
                     name={"Add Reminder"}
                     component={ AddReminder }
                     options={{headerShown: true,}}
-                />              
+                />
+                <Stack.Screen 
+                    name={"Profile"}
+                    component={ Profile }
+                    options={{headerShown: true,}}
+                />                     
                
                 
             </Stack.Navigator>
