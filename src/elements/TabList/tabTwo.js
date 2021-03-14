@@ -11,7 +11,7 @@ const TabTwo = (props) => {
   
     const navigation = useNavigation();
     return (
-      <View>
+      <View style={{flex: 1}}>
         <FlatList 
             data={reminders}
             renderItem={({item}) => 

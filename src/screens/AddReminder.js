@@ -17,8 +17,8 @@ const AddReminder = (props) => {
           <DueDate />
 
           <Pressable onPress={() => console.warn('Button was clicked')} 
-            style={{alignSelf: "center", height: 40, width: 220, backgroundColor: "gray", borderRadius: 12, alignItems: "center", marginTop: 160}}>
-              <Text style={{color: "white"}}>Add new reminder</Text>
+            style={{alignSelf: "center", height: 40, width: 220, backgroundColor: "gray", borderRadius: 12, marginTop: 160}}>
+              <Text style={{color: "white", textAlign:"center"}}>Add new reminder</Text>
           </Pressable>
       </View>
           
