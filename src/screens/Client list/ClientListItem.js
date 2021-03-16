@@ -12,11 +12,13 @@ const ClientListItem = (props) => {
 
     return (
         <View >
-            <FlatList 
+            <FlatList numColumns={2} 
                 data={clients}
                 renderItem={({item}) => 
-                <Pressable onPress={() => navigation.navigate("Profile")}>
-                    <ClientName client={item}/>
+                
+                <Pressable onPress={() => navigation.navigate("Profile")} 
+                           style={{ height: windowHeight/5, marginBottom: 5, width: windowWidth/2}}>
+                    <ClientName client={item} />
                 </Pressable>
                 }
                 

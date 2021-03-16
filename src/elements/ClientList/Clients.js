@@ -6,10 +6,10 @@ const windowWidth = Dimensions.get('window').width;
 const ClientName = (props) => {
     const client = props.client;
     return (
-      <View  >
+      <View >
           
         <Text style={{textAlign: "center", fontSize: 24, fontWeight: "bold", 
-            backgroundColor: "lightgray", width: windowWidth/2, height: windowHeight/7, marginBottom: 5}}>{client.name}</Text>
+            backgroundColor: "lightblue", height: windowHeight/5, width: windowWidth/2-20, marginLeft: 10}}>{client.name}</Text>
           
       </View>
     )

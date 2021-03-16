@@ -64,8 +64,7 @@ const Router = () => {
                     name={"Profile"}
                     component={ Profile }
                     options={{headerShown: true,}}
-                />                     
-               
+                />  
                 
             </Stack.Navigator>
         </NavigationContainer>
