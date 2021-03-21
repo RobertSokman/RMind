@@ -7,8 +7,7 @@ const Reminder = (props) => {
     const reminder = props.reminder;
     return (
       <View style={{flexDirection: 'row', borderColor: 'lightgray', borderBottomWidth: 0.5}} >
-          <Text style={styles.security}>{reminder.name}</Text>
-          <Text style={styles.securityPrice}>{reminder.description}</Text>
+          <Text style={styles.security}>{reminder.name} {reminder.description}</Text>
       </View>
     )
   }
