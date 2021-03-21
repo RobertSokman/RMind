@@ -10,6 +10,7 @@ import ClientList from "../screens/Client list/ClientList";
 import OneStock from "../screens/OneStock/OneStock";
 import AddReminder from '../screens/AddReminder';
 import Profile from '../screens/Profile/Profile';
+import Portfolio from '../screens/Portfolio/Portfolio';
 
 const Stack = createStackNavigator();
 
@@ -65,7 +66,11 @@ const Router = () => {
                     component={ Profile }
                     options={{headerShown: true,}}
                 />  
-                
+                <Stack.Screen 
+                    name={"Portfolio"}
+                    component={ Portfolio }
+                    options={{headerShown: true,}}
+                /> 
             </Stack.Navigator>
         </NavigationContainer>
     );
