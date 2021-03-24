@@ -8,7 +8,6 @@ const windowWidth = Dimensions.get('window').width;
 import ProfileDetails from "../../elements/Profile/ProfileDetails";
 import PortfolioFullList from "../../elements/Profile/PortfolioFullList";
 
-
 const Profile = () => {
   return (
     <Container>

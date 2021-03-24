@@ -7,7 +7,7 @@ import Reminders from "./src/screens/Reminders/Reminders";
 import Screen1 from "./src/screens/Screen1";
 import 'react-native-gesture-handler';
 import Router from "./src/navigation/Router";
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native'
 
 
 
