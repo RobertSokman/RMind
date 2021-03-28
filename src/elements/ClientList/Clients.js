@@ -9,8 +9,7 @@ const ClientName = (props) => {
     return (
       <View style={{height: windowHeight/5, width: windowWidth/2-20, marginLeft: 10}}>
         <Icon name="person-circle-outline" style={{fontSize: 70, color: "lightblue", textAlign: "center", marginTop: 25}} />   
-        <Text style={{textAlign: "center", fontSize: 24, fontWeight: "bold"}}>{client.name}</Text>
-          
+        <Text style={{textAlign: "center", fontSize: 24, fontWeight: "bold"}}>{client.name} {client.surname}</Text>
       </View>
     )
   }

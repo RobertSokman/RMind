@@ -1,0 +1,25 @@
+type Client @model {
+  customerNo: Int!
+  rm_No: Int!
+
+  name: String!
+  surname: String!
+  nationality: String
+  birthday: String
+  sector: String
+  customerStatus: String
+  languageOfReporting: String
+  domicile: String
+  internetBankingService: String
+  reportingCurrency: String
+}
+
+type Security @model {
+  securityCode: Int!
+  company: String
+  currency: String
+  price1: Int
+  price2: Int
+  price3: Int
+}
+
