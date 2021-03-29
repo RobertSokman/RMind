@@ -12,6 +12,7 @@ type Client @model {
   domicile: String
   internetBankingService: String
   reportingCurrency: String
+
 }
 
 type Security @model {
@@ -23,3 +24,11 @@ type Security @model {
   price3: Int
 }
 
+type Portfolio @model {
+  portfolioNo: Int!
+  status: String
+  type: String
+  feeCode: String
+  initialValue: Float
+  ownerNo: Int
+}
