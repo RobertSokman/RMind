@@ -1,4 +1,5 @@
 type Client @model {
+  id: ID!
   customerNo: Int!
   rm_No: Int!
 
@@ -13,6 +14,7 @@ type Client @model {
   internetBankingService: String
   reportingCurrency: String
 
+  portfolios: [Portfolio] @connection(keyName: "ownedBy", fields: ["id"])
 }
 
 type Security @model {
@@ -24,11 +26,13 @@ type Security @model {
   price3: Int
 }
 
-type Portfolio @model {
+type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
+  
   portfolioNo: Int!
   status: String
   type: String
   feeCode: String
   initialValue: Float
-  ownerNo: Int
+  ownerId: ID!
+  owner: Client @connection(fields: ["ownerId"])
 }

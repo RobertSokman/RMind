@@ -20,6 +20,20 @@ export const createClient = /* GraphQL */ `
       domicile
       internetBankingService
       reportingCurrency
+      portfolios {
+        items {
+          id
+          portfolioNo
+          status
+          type
+          feeCode
+          initialValue
+          ownerId
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -44,6 +58,20 @@ export const updateClient = /* GraphQL */ `
       domicile
       internetBankingService
       reportingCurrency
+      portfolios {
+        items {
+          id
+          portfolioNo
+          status
+          type
+          feeCode
+          initialValue
+          ownerId
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -68,6 +96,188 @@ export const deleteClient = /* GraphQL */ `
       domicile
       internetBankingService
       reportingCurrency
+      portfolios {
+        items {
+          id
+          portfolioNo
+          status
+          type
+          feeCode
+          initialValue
+          ownerId
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createSecurity = /* GraphQL */ `
+  mutation CreateSecurity(
+    $input: CreateSecurityInput!
+    $condition: ModelSecurityConditionInput
+  ) {
+    createSecurity(input: $input, condition: $condition) {
+      id
+      securityCode
+      company
+      currency
+      price1
+      price2
+      price3
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateSecurity = /* GraphQL */ `
+  mutation UpdateSecurity(
+    $input: UpdateSecurityInput!
+    $condition: ModelSecurityConditionInput
+  ) {
+    updateSecurity(input: $input, condition: $condition) {
+      id
+      securityCode
+      company
+      currency
+      price1
+      price2
+      price3
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteSecurity = /* GraphQL */ `
+  mutation DeleteSecurity(
+    $input: DeleteSecurityInput!
+    $condition: ModelSecurityConditionInput
+  ) {
+    deleteSecurity(input: $input, condition: $condition) {
+      id
+      securityCode
+      company
+      currency
+      price1
+      price2
+      price3
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createPortfolio = /* GraphQL */ `
+  mutation CreatePortfolio(
+    $input: CreatePortfolioInput!
+    $condition: ModelPortfolioConditionInput
+  ) {
+    createPortfolio(input: $input, condition: $condition) {
+      id
+      portfolioNo
+      status
+      type
+      feeCode
+      initialValue
+      ownerId
+      owner {
+        id
+        customerNo
+        rm_No
+        name
+        surname
+        nationality
+        birthday
+        sector
+        customerStatus
+        languageOfReporting
+        domicile
+        internetBankingService
+        reportingCurrency
+        portfolios {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updatePortfolio = /* GraphQL */ `
+  mutation UpdatePortfolio(
+    $input: UpdatePortfolioInput!
+    $condition: ModelPortfolioConditionInput
+  ) {
+    updatePortfolio(input: $input, condition: $condition) {
+      id
+      portfolioNo
+      status
+      type
+      feeCode
+      initialValue
+      ownerId
+      owner {
+        id
+        customerNo
+        rm_No
+        name
+        surname
+        nationality
+        birthday
+        sector
+        customerStatus
+        languageOfReporting
+        domicile
+        internetBankingService
+        reportingCurrency
+        portfolios {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deletePortfolio = /* GraphQL */ `
+  mutation DeletePortfolio(
+    $input: DeletePortfolioInput!
+    $condition: ModelPortfolioConditionInput
+  ) {
+    deletePortfolio(input: $input, condition: $condition) {
+      id
+      portfolioNo
+      status
+      type
+      feeCode
+      initialValue
+      ownerId
+      owner {
+        id
+        customerNo
+        rm_No
+        name
+        surname
+        nationality
+        birthday
+        sector
+        customerStatus
+        languageOfReporting
+        domicile
+        internetBankingService
+        reportingCurrency
+        portfolios {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
