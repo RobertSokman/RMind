@@ -33,7 +33,7 @@ const ClientListItem = (props) => {
                 data={clients}
                 renderItem={({item}) => 
                 
-                <Pressable onPress={() => navigation.navigate("Profile")} 
+                <Pressable onPress={() => navigation.navigate("Profile", {name: item.name, surname: item.surname})} 
                            style={{ height: windowHeight/5, marginBottom: 5, width: windowWidth/2}}>
                     <ClientName client={item} />
                 </Pressable>
