@@ -28,7 +28,7 @@ type Security @model {
 
 type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
   
-  portfolioNo: Int!
+  portfolioNo: String
   status: String
   type: String
   feeCode: String

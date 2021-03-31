@@ -3,7 +3,6 @@ import { View, Text, FlatList, Dimensions, Pressable } from "react-native";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 import {useNavigation} from '@react-navigation/native';
-import clients from "../../../assets/data/clients";
 import ClientName from "../../elements/ClientList/Clients";
 import { API, graphqlOperation } from "aws-amplify";
 import { listClients } from "../../graphql/queries";
