@@ -20,7 +20,7 @@ const Profile = ({route}) => {
         <Text style={{fontWeight: "bold"}}>Portfolios: </Text>
       </View>
       <SafeAreaView style={{flex: 1}}>
-        <PortfolioFullList />
+        <PortfolioFullList name = {name} surname = {surname}/>
       </SafeAreaView>
     </Container>
     

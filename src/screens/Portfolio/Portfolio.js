@@ -7,13 +7,14 @@ const windowWidth = Dimensions.get('window').width;
 import {useNavigation} from '@react-navigation/native';
 
 
-const Portfolio = () => {
+const Portfolio = ({route}) => {
   const navigation = useNavigation();
+  const { pid } = route.params;
   return (
     <Container>
       <View style={{alignItems: "center", marginTop: windowHeight/25}}>
           <Text>Portfolio ID:</Text>
-          <Text>102966-1</Text>
+          <Text>{pid}</Text>
       </View>
       <View style={{marginTop: windowHeight/25, alignItems: "center"}}>
 

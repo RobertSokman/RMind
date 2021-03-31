@@ -19,7 +19,7 @@ type Client @model {
 
 type Security @model {
 
-  securityCode: String
+  securityCode: Int
   company: String
   description: String
   currency: String
