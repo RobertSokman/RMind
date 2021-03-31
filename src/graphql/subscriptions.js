@@ -112,10 +112,18 @@ export const onCreateSecurity = /* GraphQL */ `
       id
       securityCode
       company
+      description
       currency
       price1
+      priceOneDate
       price2
+      priceTwoDate
       price3
+      priceThreeDate
+      price4
+      priceFourDate
+      price5
+      priceFiveDate
       createdAt
       updatedAt
     }
@@ -127,10 +135,18 @@ export const onUpdateSecurity = /* GraphQL */ `
       id
       securityCode
       company
+      description
       currency
       price1
+      priceOneDate
       price2
+      priceTwoDate
       price3
+      priceThreeDate
+      price4
+      priceFourDate
+      price5
+      priceFiveDate
       createdAt
       updatedAt
     }
@@ -142,10 +158,18 @@ export const onDeleteSecurity = /* GraphQL */ `
       id
       securityCode
       company
+      description
       currency
       price1
+      priceOneDate
       price2
+      priceTwoDate
       price3
+      priceThreeDate
+      price4
+      priceFourDate
+      price5
+      priceFiveDate
       createdAt
       updatedAt
     }

@@ -18,12 +18,21 @@ type Client @model {
 }
 
 type Security @model {
-  securityCode: Int!
+
+  securityCode: String
   company: String
+  description: String
   currency: String
-  price1: Int
-  price2: Int
-  price3: Int
+  price1: Float
+  priceOneDate: String
+  price2: Float
+  priceTwoDate: String
+  price3: Float
+  priceThreeDate: String
+  price4: Float
+  priceFourDate: String
+  price5: Float
+  priceFiveDate: String
 }
 
 type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {

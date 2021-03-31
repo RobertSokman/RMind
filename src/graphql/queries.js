@@ -73,10 +73,18 @@ export const getSecurity = /* GraphQL */ `
       id
       securityCode
       company
+      description
       currency
       price1
+      priceOneDate
       price2
+      priceTwoDate
       price3
+      priceThreeDate
+      price4
+      priceFourDate
+      price5
+      priceFiveDate
       createdAt
       updatedAt
     }
@@ -93,10 +101,18 @@ export const listSecuritys = /* GraphQL */ `
         id
         securityCode
         company
+        description
         currency
         price1
+        priceOneDate
         price2
+        priceTwoDate
         price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
         createdAt
         updatedAt
       }
