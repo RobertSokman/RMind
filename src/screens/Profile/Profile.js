@@ -9,18 +9,19 @@ import ProfileDetails from "../../elements/Profile/ProfileDetails";
 import PortfolioFullList from "../../elements/Profile/PortfolioFullList";
 
 const Profile = ({route}) => {
-  const { name, surname } = route.params;
+  const { name, surname, country, birthday, sector, language, currency, customerNo } = route.params;
+  
   return (
     <Container>
       
-      <ProfileDetails name = {name + " " + surname} country= "Switzerland" birthday="15.10.1959" sector="Private" language="English, French" 
-        address="25 Imperial Rd, Windsor, SL4 3RU" currency = "EUR"/>
+      <ProfileDetails name = {name + " " + surname } country= {country} birthday={birthday} sector={sector} language={language} 
+        currency = {currency}/>
       
       <View style={{marginTop: windowHeight/14, marginLeft: windowWidth/14}}>
         <Text style={{fontWeight: "bold"}}>Portfolios: </Text>
       </View>
       <SafeAreaView style={{flex: 1}}>
-        <PortfolioFullList name = {name} surname = {surname}/>
+        <PortfolioFullList owner = {customerNo}/>
       </SafeAreaView>
     </Container>
     

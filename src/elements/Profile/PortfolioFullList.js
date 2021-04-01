@@ -1,25 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, Dimensions, Pressable } from "react-native";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import PortfolioItem from "./PortfolioList";
 import { API, graphqlOperation } from "aws-amplify";
 import { listPortfolios } from "../../graphql/queries";
 
 
-const PortfolioFullList = (name, surname) => {
+const PortfolioFullList = ( {owner} ) => {
     const navigation = useNavigation();
-
-
+    
+    const sth = owner;
     const [portfolios, setPortfolios] = useState([]);
 
-    useEffect( () => {
+    useEffect(() => {
         const fetchClients = async () => {
             try {
                 const portfoliosResult = await API.graphql(
-                    graphqlOperation(listPortfolios)
-                )
+                    graphqlOperation(listPortfolios, {filter: { ownerNo: { eq: sth } }})
+                    )
                 setPortfolios(portfoliosResult.data.listPortfolios.items);
             } catch (e) {
                 console.log(e);
@@ -28,19 +28,20 @@ const PortfolioFullList = (name, surname) => {
         fetchClients();
     }, [])
 
+
+
     return (
         <View >
-            <FlatList 
+            <FlatList
                 data={portfolios}
-                
-                renderItem={({item}) => 
-                
-                <Pressable onPress={() => navigation.navigate("Portfolio", {pid: item.portfolioNo})} 
-                           style={{marginTop: 10}}>
-                    <PortfolioItem portfolio={item} />
-                </Pressable>
+
+                renderItem={({ item }) =>
+                    <Pressable onPress={() => navigation.navigate("Portfolio", { pid: item.portfolioNo })}
+                        style={{ marginTop: 10 }}>
+                        <PortfolioItem portfolio={item} />
+                    </Pressable>
                 }
-                
+
             />
         </View>
     );

@@ -7,7 +7,7 @@ const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
 
-const ProfileDetails = ({name, country, birthday, sector, language, address, currency}) => {
+const ProfileDetails = ({name, country, birthday, sector, language, currency}) => {
   return (
     
     <View style={{alignItems: "center", marginTop: windowHeight/8}}>
@@ -17,7 +17,6 @@ const ProfileDetails = ({name, country, birthday, sector, language, address, cur
         <Text>Birthday: {birthday}</Text>
         <Text>{sector} sector</Text>
         <Text>Language: {language}</Text>
-        <Text>Address: {address}</Text>
         <Text>Reporting Currency: {currency}</Text>
     </View>
       

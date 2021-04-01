@@ -8,11 +8,17 @@ import { Icon } from 'native-base';
 const PortfolioItem = (props) => {
     const portfolio = props.portfolio;
     return (
+
+      
       <View>
         
-        <Text style={{fontSize: 14, marginLeft: windowWidth/14}}>{portfolio.portfolioNo}</Text>
+        
+          <Text style={{fontSize: 14, marginLeft: windowWidth/14}}>{portfolio.portfolioNo}</Text>
+        
           
       </View>
+
+      
     )
   }
   

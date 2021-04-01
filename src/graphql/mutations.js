@@ -28,6 +28,7 @@ export const createClient = /* GraphQL */ `
           type
           feeCode
           initialValue
+          ownerNo
           ownerId
           createdAt
           updatedAt
@@ -66,6 +67,7 @@ export const updateClient = /* GraphQL */ `
           type
           feeCode
           initialValue
+          ownerNo
           ownerId
           createdAt
           updatedAt
@@ -104,6 +106,7 @@ export const deleteClient = /* GraphQL */ `
           type
           feeCode
           initialValue
+          ownerNo
           ownerId
           createdAt
           updatedAt
@@ -205,6 +208,7 @@ export const createPortfolio = /* GraphQL */ `
       type
       feeCode
       initialValue
+      ownerNo
       ownerId
       owner {
         id
@@ -243,6 +247,7 @@ export const updatePortfolio = /* GraphQL */ `
       type
       feeCode
       initialValue
+      ownerNo
       ownerId
       owner {
         id
@@ -281,6 +286,7 @@ export const deletePortfolio = /* GraphQL */ `
       type
       feeCode
       initialValue
+      ownerNo
       ownerId
       owner {
         id

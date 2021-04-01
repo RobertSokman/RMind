@@ -38,10 +38,12 @@ type Security @model {
 type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
   
   portfolioNo: String
+  
   status: String
   type: String
   feeCode: String
   initialValue: Float
+  ownerNo: Int
   ownerId: ID!
   owner: Client @connection(fields: ["ownerId"])
 }

@@ -25,6 +25,7 @@ export const getClient = /* GraphQL */ `
           type
           feeCode
           initialValue
+          ownerNo
           ownerId
           createdAt
           updatedAt
@@ -129,6 +130,7 @@ export const getPortfolio = /* GraphQL */ `
       type
       feeCode
       initialValue
+      ownerNo
       ownerId
       owner {
         id
@@ -169,6 +171,7 @@ export const listPortfolios = /* GraphQL */ `
         type
         feeCode
         initialValue
+        ownerNo
         ownerId
         owner {
           id
