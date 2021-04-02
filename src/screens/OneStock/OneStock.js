@@ -9,30 +9,32 @@ import { LineChart } from "react-native-chart-kit";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
-const OneStock = () => {
-  
+const OneStock = ({route}) => {
+  const { name, code, currency, price1, price2, price3, price4, price5, date1, date2, date3, date4, date5 } = route.params;
   return (
     
     <Container >
       <View >
         
-          <OneSecurity name="Security Name" code="Security code" price='23' currency='GBP'/>
+          <OneSecurity name={name} code={code} price={price5} currency={currency}/>
           <LineChart
             data={{
-              labels: ["January", "February", "March"],
+              labels: [date1, date2, date3, date4, date5],
               datasets: [
                 {
                   data: [
-                    39,
-                    49,
-                    27
+                    price1,
+                    price2,
+                    price3,
+                    price4,
+                    price5,
                   ]
                 }
               ]
             }}
             width={windowWidth}
             height={250}
-            yAxisLabel="$"
+            //yAxisLabel="$"
             yAxisSuffix="k"
             
             chartConfig={{
