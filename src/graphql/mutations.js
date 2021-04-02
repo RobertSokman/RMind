@@ -313,3 +313,51 @@ export const deletePortfolio = /* GraphQL */ `
     }
   }
 `;
+export const createReminder = /* GraphQL */ `
+  mutation CreateReminder(
+    $input: CreateReminderInput!
+    $condition: ModelReminderConditionInput
+  ) {
+    createReminder(input: $input, condition: $condition) {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateReminder = /* GraphQL */ `
+  mutation UpdateReminder(
+    $input: UpdateReminderInput!
+    $condition: ModelReminderConditionInput
+  ) {
+    updateReminder(input: $input, condition: $condition) {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteReminder = /* GraphQL */ `
+  mutation DeleteReminder(
+    $input: DeleteReminderInput!
+    $condition: ModelReminderConditionInput
+  ) {
+    deleteReminder(input: $input, condition: $condition) {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;

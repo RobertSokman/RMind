@@ -8,7 +8,7 @@ const Security = (props) => {
     return (
       <View style={{flexDirection: 'row', borderColor: 'lightgray', borderBottomWidth: 0.5}} >
           <Text style={styles.security}>{security.company}</Text>
-          <Text style={styles.securityPrice}>$ {security.price}</Text>
+          <Text style={styles.securityPrice}>$ {security.price5}</Text>
       </View>
     )
   }

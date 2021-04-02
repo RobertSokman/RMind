@@ -197,3 +197,36 @@ export const listPortfolios = /* GraphQL */ `
     }
   }
 `;
+export const getReminder = /* GraphQL */ `
+  query GetReminder($id: ID!) {
+    getReminder(id: $id) {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listReminders = /* GraphQL */ `
+  query ListReminders(
+    $filter: ModelReminderFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listReminders(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        reminderNo
+        id
+        name
+        description
+        dueDate
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

@@ -286,3 +286,42 @@ export const onDeletePortfolio = /* GraphQL */ `
     }
   }
 `;
+export const onCreateReminder = /* GraphQL */ `
+  subscription OnCreateReminder {
+    onCreateReminder {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateReminder = /* GraphQL */ `
+  subscription OnUpdateReminder {
+    onUpdateReminder {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteReminder = /* GraphQL */ `
+  subscription OnDeleteReminder {
+    onDeleteReminder {
+      reminderNo
+      id
+      name
+      description
+      dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;

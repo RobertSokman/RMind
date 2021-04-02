@@ -19,7 +19,7 @@ type Client @model {
 
 type Security @model {
 
-  securityCode: Int
+  securityCode: String
   company: String
   description: String
   currency: String
@@ -46,4 +46,14 @@ type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
   ownerNo: Int
   ownerId: ID!
   owner: Client @connection(fields: ["ownerId"])
+}
+
+type Reminder @model {
+
+  reminderNo: Int
+  id: ID
+  name: String
+  description: String
+  dueDate: AWSDate
+  
 }

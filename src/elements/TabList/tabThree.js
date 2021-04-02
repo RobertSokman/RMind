@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Header, Content, List, ListItem, Text } from 'native-base';
 import { Dimensions, View, FlatList } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
@@ -7,10 +7,38 @@ import {useNavigation} from '@react-navigation/native';
 import reminders from '../../../assets/data/reminders';
 import Reminder from '../Reminder.js/Reminder';
 import GetCurrentDate from './CurrentDate';
+import { API, graphqlOperation } from "aws-amplify";
+import { listReminders } from "../../graphql/queries";
+import CurrentDateFilter from './CurrentDateFilter';
+
+
+
 
 const TabThree = (props) => {
-  
+
     const navigation = useNavigation();
+    const [reminders, setReminders] = useState([]);
+
+    var today = new Date();
+    var date = today.getDate().toString().padStart(2, '0');
+    var month = (today.getMonth() + 1).toString().padStart(2, '0');
+    var year = today.getFullYear();
+    const date1= year + '-' + month + '-' + date;
+
+    useEffect(() => {
+        const fetchClients = async () => {
+            try {
+                const remindersResult = await API.graphql(
+                    graphqlOperation(listReminders, {filter: { dueDate: { eq: date1} }})
+                    )
+                setReminders(remindersResult.data.listReminders.items);
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        fetchClients();
+    }, [])
+
     return (
       <View style={{flex: 1}}>
         <Text style={{height: 25, textAlign: "center", marginTop: 10}}><GetCurrentDate /></Text>

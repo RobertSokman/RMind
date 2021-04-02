@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, Dimensions, Pressable } from "react-native";
-import securities from "../../../assets/data/securities";
 import Security from "../../elements/Security/Security";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 import {useNavigation} from '@react-navigation/native';
 import OneStock from "../OneStock/OneStock";
 import { Item } from "native-base";
+import { API, graphqlOperation } from "aws-amplify";
+import { listSecuritys } from "../../graphql/queries";
 
 const FullList = (props) => {
     const navigation = useNavigation();
+    
+    const [securities, setSecurities] = useState([]);
 
+    useEffect(() => {
+        const fetchClients = async () => {
+            try {
+                const securitiesResult = await API.graphql(
+                    graphqlOperation(listSecuritys)
+                    )
+                setSecurities(securitiesResult.data.listSecuritys.items);
+            } catch (e) {
+                console.log(e);
+            }
+        }
+        fetchClients();
+    }, [])
     return (
         <View>
             <FlatList 
