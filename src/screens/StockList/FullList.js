@@ -33,7 +33,7 @@ const FullList = (props) => {
                 data={securities}
                 renderItem={({item}) => 
                 <Pressable onPress={() => navigation.navigate("Security", {name: item.company, code: item.securityCode, currency: item.currency, 
-                    price1: item.price1, price2: item.price2, price3: item.price3, price4: item.price4, price5: item.price4, date1: item.priceOneDate,
+                    price1: item.price1, price2: item.price2, price3: item.price3, price4: item.price4, price5: item.price5, date1: item.priceOneDate,
                     date2: item.priceTwoDate, date3: item.priceThreeDate, date4: item.priceFourDate, date5: item.priceFiveDate})}>
                     <Security security={item}/>
                 </Pressable>
