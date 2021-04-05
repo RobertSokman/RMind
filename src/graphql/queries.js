@@ -21,6 +21,7 @@ export const getClient = /* GraphQL */ `
         items {
           id
           portfolioNo
+          portfolioNoNumerical
           status
           type
           feeCode
@@ -86,6 +87,41 @@ export const getSecurity = /* GraphQL */ `
       priceFourDate
       price5
       priceFiveDate
+      parentNo
+      parentId
+      parentPortfolio {
+        id
+        portfolioNo
+        portfolioNoNumerical
+        status
+        type
+        feeCode
+        initialValue
+        ownerNo
+        ownerId
+        owner {
+          id
+          customerNo
+          rm_No
+          name
+          surname
+          nationality
+          birthday
+          sector
+          customerStatus
+          languageOfReporting
+          domicile
+          internetBankingService
+          reportingCurrency
+          createdAt
+          updatedAt
+        }
+        securities {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -114,6 +150,21 @@ export const listSecuritys = /* GraphQL */ `
         priceFourDate
         price5
         priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }
@@ -126,6 +177,7 @@ export const getPortfolio = /* GraphQL */ `
     getPortfolio(id: $id) {
       id
       portfolioNo
+      portfolioNoNumerical
       status
       type
       feeCode
@@ -152,6 +204,30 @@ export const getPortfolio = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      securities {
+        items {
+          id
+          securityCode
+          company
+          description
+          currency
+          price1
+          priceOneDate
+          price2
+          priceTwoDate
+          price3
+          priceThreeDate
+          price4
+          priceFourDate
+          price5
+          priceFiveDate
+          parentNo
+          parentId
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -167,6 +243,7 @@ export const listPortfolios = /* GraphQL */ `
       items {
         id
         portfolioNo
+        portfolioNoNumerical
         status
         type
         feeCode
@@ -189,6 +266,9 @@ export const listPortfolios = /* GraphQL */ `
           reportingCurrency
           createdAt
           updatedAt
+        }
+        securities {
+          nextToken
         }
         createdAt
         updatedAt

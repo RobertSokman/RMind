@@ -17,7 +17,7 @@ type Client @model {
   portfolios: [Portfolio] @connection(keyName: "ownedBy", fields: ["id"])
 }
 
-type Security @model {
+type Security @model @key(name: "belongTo", fields: ["parentId"]) {
 
   securityCode: String
   company: String
@@ -33,12 +33,15 @@ type Security @model {
   priceFourDate: String
   price5: Float
   priceFiveDate: String
+  parentNo: Int
+  parentId: ID
+  parentPortfolio: Portfolio @connection(fields: ["parentId"])
 }
 
 type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
-  
+  id: ID
   portfolioNo: String
-  
+  portfolioNoNumerical: Int
   status: String
   type: String
   feeCode: String
@@ -46,6 +49,8 @@ type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
   ownerNo: Int
   ownerId: ID!
   owner: Client @connection(fields: ["ownerId"])
+
+  securities: [Security] @connection(keyName: "belongTo", fields: ["id"])
 }
 
 type Reminder @model {

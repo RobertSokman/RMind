@@ -5,6 +5,7 @@ import { Container, Header, Title } from 'native-base';
 import { API, Auth, graphqlOperation } from 'aws-amplify';
 import { createReminder } from "../graphql/mutations";
 import { useEffect } from "react/cjs/react.development";
+import { color } from "react-native-reanimated";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
@@ -42,7 +43,7 @@ const AddReminder = (props) => {
           />
 
 
-          <Pressable onPress= {newDescription}
+          <Pressable onPress= {newDescription} 
             style={{alignSelf: "center", height: 40, width: 220, backgroundColor: "gray", borderRadius: 12, marginTop: 160}}>
               <Text style={{color: "white", textAlign:"center"}}>Add new reminder</Text>
           </Pressable>

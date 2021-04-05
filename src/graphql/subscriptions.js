@@ -21,6 +21,7 @@ export const onCreateClient = /* GraphQL */ `
         items {
           id
           portfolioNo
+          portfolioNoNumerical
           status
           type
           feeCode
@@ -57,6 +58,7 @@ export const onUpdateClient = /* GraphQL */ `
         items {
           id
           portfolioNo
+          portfolioNoNumerical
           status
           type
           feeCode
@@ -93,6 +95,7 @@ export const onDeleteClient = /* GraphQL */ `
         items {
           id
           portfolioNo
+          portfolioNoNumerical
           status
           type
           feeCode
@@ -127,6 +130,41 @@ export const onCreateSecurity = /* GraphQL */ `
       priceFourDate
       price5
       priceFiveDate
+      parentNo
+      parentId
+      parentPortfolio {
+        id
+        portfolioNo
+        portfolioNoNumerical
+        status
+        type
+        feeCode
+        initialValue
+        ownerNo
+        ownerId
+        owner {
+          id
+          customerNo
+          rm_No
+          name
+          surname
+          nationality
+          birthday
+          sector
+          customerStatus
+          languageOfReporting
+          domicile
+          internetBankingService
+          reportingCurrency
+          createdAt
+          updatedAt
+        }
+        securities {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -150,6 +188,41 @@ export const onUpdateSecurity = /* GraphQL */ `
       priceFourDate
       price5
       priceFiveDate
+      parentNo
+      parentId
+      parentPortfolio {
+        id
+        portfolioNo
+        portfolioNoNumerical
+        status
+        type
+        feeCode
+        initialValue
+        ownerNo
+        ownerId
+        owner {
+          id
+          customerNo
+          rm_No
+          name
+          surname
+          nationality
+          birthday
+          sector
+          customerStatus
+          languageOfReporting
+          domicile
+          internetBankingService
+          reportingCurrency
+          createdAt
+          updatedAt
+        }
+        securities {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -173,6 +246,41 @@ export const onDeleteSecurity = /* GraphQL */ `
       priceFourDate
       price5
       priceFiveDate
+      parentNo
+      parentId
+      parentPortfolio {
+        id
+        portfolioNo
+        portfolioNoNumerical
+        status
+        type
+        feeCode
+        initialValue
+        ownerNo
+        ownerId
+        owner {
+          id
+          customerNo
+          rm_No
+          name
+          surname
+          nationality
+          birthday
+          sector
+          customerStatus
+          languageOfReporting
+          domicile
+          internetBankingService
+          reportingCurrency
+          createdAt
+          updatedAt
+        }
+        securities {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }
@@ -183,6 +291,7 @@ export const onCreatePortfolio = /* GraphQL */ `
     onCreatePortfolio {
       id
       portfolioNo
+      portfolioNoNumerical
       status
       type
       feeCode
@@ -208,6 +317,30 @@ export const onCreatePortfolio = /* GraphQL */ `
         }
         createdAt
         updatedAt
+      }
+      securities {
+        items {
+          id
+          securityCode
+          company
+          description
+          currency
+          price1
+          priceOneDate
+          price2
+          priceTwoDate
+          price3
+          priceThreeDate
+          price4
+          priceFourDate
+          price5
+          priceFiveDate
+          parentNo
+          parentId
+          createdAt
+          updatedAt
+        }
+        nextToken
       }
       createdAt
       updatedAt
@@ -219,6 +352,7 @@ export const onUpdatePortfolio = /* GraphQL */ `
     onUpdatePortfolio {
       id
       portfolioNo
+      portfolioNoNumerical
       status
       type
       feeCode
@@ -245,6 +379,30 @@ export const onUpdatePortfolio = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      securities {
+        items {
+          id
+          securityCode
+          company
+          description
+          currency
+          price1
+          priceOneDate
+          price2
+          priceTwoDate
+          price3
+          priceThreeDate
+          price4
+          priceFourDate
+          price5
+          priceFiveDate
+          parentNo
+          parentId
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -255,6 +413,7 @@ export const onDeletePortfolio = /* GraphQL */ `
     onDeletePortfolio {
       id
       portfolioNo
+      portfolioNoNumerical
       status
       type
       feeCode
@@ -280,6 +439,30 @@ export const onDeletePortfolio = /* GraphQL */ `
         }
         createdAt
         updatedAt
+      }
+      securities {
+        items {
+          id
+          securityCode
+          company
+          description
+          currency
+          price1
+          priceOneDate
+          price2
+          priceTwoDate
+          price3
+          priceThreeDate
+          price4
+          priceFourDate
+          price5
+          priceFiveDate
+          parentNo
+          parentId
+          createdAt
+          updatedAt
+        }
+        nextToken
       }
       createdAt
       updatedAt

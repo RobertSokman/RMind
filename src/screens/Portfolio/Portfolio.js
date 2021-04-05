@@ -18,15 +18,10 @@ const Portfolio = ({route}) => {
       </View>
       <View style={{marginTop: windowHeight/25, alignItems: "center"}}>
 
-          <Pressable onPress={() => navigation.navigate("Security")}>
-            <Text style={{marginBottom: 10}}>Security 1</Text>
-          </Pressable>
-          <Pressable onPress={() => navigation.navigate("Security")}>
-            <Text style={{marginBottom: 10}}>Security 2</Text>
-          </Pressable>
-          <Pressable onPress={() => navigation.navigate("Security")}>
-            <Text style={{marginBottom: 10}}>Security 3</Text>
-          </Pressable>
+      <SafeAreaView style={{ marginTop: 55, flex:1}}>
+          <SecurityList parentPortfolio = {pid}/>
+      </SafeAreaView>
+          
           
       </View>
     </Container>
@@ -35,3 +30,5 @@ const Portfolio = ({route}) => {
 }
 
 export default Portfolio;
+
+
