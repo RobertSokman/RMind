@@ -122,6 +122,21 @@ export const getSecurity = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -164,6 +179,9 @@ export const listSecuritys = /* GraphQL */ `
           ownerId
           createdAt
           updatedAt
+        }
+        trades {
+          nextToken
         }
         createdAt
         updatedAt
@@ -303,6 +321,107 @@ export const listReminders = /* GraphQL */ `
         name
         description
         dueDate
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const getTradingActivity = /* GraphQL */ `
+  query GetTradingActivity($id: ID!) {
+    getTradingActivity(id: $id) {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listTradingActivitys = /* GraphQL */ `
+  query ListTradingActivitys(
+    $filter: ModelTradingActivityFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listTradingActivitys(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        securityId
+        portfolioNo
+        securityNo
+        securityCode
+        type
+        dateOfTransaction
+        amount
+        securityInvolved {
+          id
+          securityCode
+          company
+          description
+          currency
+          price1
+          priceOneDate
+          price2
+          priceTwoDate
+          price3
+          priceThreeDate
+          price4
+          priceFourDate
+          price5
+          priceFiveDate
+          parentNo
+          parentId
+          createdAt
+          updatedAt
+        }
         createdAt
         updatedAt
       }

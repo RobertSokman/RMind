@@ -165,6 +165,21 @@ export const onCreateSecurity = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -223,6 +238,21 @@ export const onUpdateSecurity = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -280,6 +310,21 @@ export const onDeleteSecurity = /* GraphQL */ `
         }
         createdAt
         updatedAt
+      }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
       }
       createdAt
       updatedAt
@@ -503,6 +548,165 @@ export const onDeleteReminder = /* GraphQL */ `
       name
       description
       dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onCreateTradingActivity = /* GraphQL */ `
+  subscription OnCreateTradingActivity {
+    onCreateTradingActivity {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateTradingActivity = /* GraphQL */ `
+  subscription OnUpdateTradingActivity {
+    onUpdateTradingActivity {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteTradingActivity = /* GraphQL */ `
+  subscription OnDeleteTradingActivity {
+    onDeleteTradingActivity {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }

@@ -177,6 +177,21 @@ export const createSecurity = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -238,6 +253,21 @@ export const updateSecurity = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
+      }
       createdAt
       updatedAt
     }
@@ -298,6 +328,21 @@ export const deleteSecurity = /* GraphQL */ `
         }
         createdAt
         updatedAt
+      }
+      trades {
+        items {
+          id
+          securityId
+          portfolioNo
+          securityNo
+          securityCode
+          type
+          dateOfTransaction
+          amount
+          createdAt
+          updatedAt
+        }
+        nextToken
       }
       createdAt
       updatedAt
@@ -539,6 +584,174 @@ export const deleteReminder = /* GraphQL */ `
       name
       description
       dueDate
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const createTradingActivity = /* GraphQL */ `
+  mutation CreateTradingActivity(
+    $input: CreateTradingActivityInput!
+    $condition: ModelTradingActivityConditionInput
+  ) {
+    createTradingActivity(input: $input, condition: $condition) {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateTradingActivity = /* GraphQL */ `
+  mutation UpdateTradingActivity(
+    $input: UpdateTradingActivityInput!
+    $condition: ModelTradingActivityConditionInput
+  ) {
+    updateTradingActivity(input: $input, condition: $condition) {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteTradingActivity = /* GraphQL */ `
+  mutation DeleteTradingActivity(
+    $input: DeleteTradingActivityInput!
+    $condition: ModelTradingActivityConditionInput
+  ) {
+    deleteTradingActivity(input: $input, condition: $condition) {
+      id
+      securityId
+      portfolioNo
+      securityNo
+      securityCode
+      type
+      dateOfTransaction
+      amount
+      securityInvolved {
+        id
+        securityCode
+        company
+        description
+        currency
+        price1
+        priceOneDate
+        price2
+        priceTwoDate
+        price3
+        priceThreeDate
+        price4
+        priceFourDate
+        price5
+        priceFiveDate
+        parentNo
+        parentId
+        parentPortfolio {
+          id
+          portfolioNo
+          portfolioNoNumerical
+          status
+          type
+          feeCode
+          initialValue
+          ownerNo
+          ownerId
+          createdAt
+          updatedAt
+        }
+        trades {
+          nextToken
+        }
+        createdAt
+        updatedAt
+      }
       createdAt
       updatedAt
     }

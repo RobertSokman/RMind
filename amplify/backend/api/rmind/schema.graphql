@@ -18,7 +18,7 @@ type Client @model {
 }
 
 type Security @model @key(name: "belongTo", fields: ["parentId"]) {
-
+  id: ID
   securityCode: String
   company: String
   description: String
@@ -36,6 +36,8 @@ type Security @model @key(name: "belongTo", fields: ["parentId"]) {
   parentNo: Int
   parentId: ID
   parentPortfolio: Portfolio @connection(fields: ["parentId"])
+
+  trades: [TradingActivity] @connection(keyName: "with", fields: ["id"])
 }
 
 type Portfolio @model @key(name: "ownedBy", fields: ["ownerId"]) {
@@ -61,4 +63,15 @@ type Reminder @model {
   description: String
   dueDate: AWSDate
   
+}
+
+type TradingActivity @model @key(name: "with", fields: ["securityId"]){
+  securityId: ID
+  portfolioNo: Int
+  securityNo: Int
+  securityCode: String
+  type: String
+  dateOfTransaction: String
+  amount: Float
+  securityInvolved: Security @connection(fields: ["securityId"])
 }
