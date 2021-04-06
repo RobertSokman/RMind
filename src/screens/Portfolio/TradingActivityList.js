@@ -7,21 +7,22 @@ import {useNavigation} from '@react-navigation/native';
 import OneStock from "../OneStock/OneStock";
 import { Item } from "native-base";
 import { API, graphqlOperation } from "aws-amplify";
-import { listSecuritys } from "../../graphql/queries";
+import { listTradingActivitys } from "../../graphql/queries";
+import TradingListElement from "./TradingListElement";
 
-const SecurityList = ( {parentPortfolio}) => {
+const TradingActivityList = ( {parentPortfolio}) => {
     const navigation = useNavigation();
     
-    const [securities, setSecurities] = useState([]);
+    const [trades, setTrades] = useState([]);
     const parentPortfolioNo = parentPortfolio;
 
     useEffect(() => {
         const fetchClients = async () => {
             try {
-                const securitiesResult = await API.graphql(
-                    graphqlOperation(listSecuritys, {filter: { ownerNo: { eq: parentPortfolioNo } }})
+                const tradesResult = await API.graphql(
+                    graphqlOperation(listTradingActivitys, {filter: { portfolioNo: { eq: parentPortfolioNo } }})
                     )
-                setSecurities(securitiesResult.data.listSecuritys.items);
+                setTrades(tradesResult.data.listTradingActivitys.items);
             } catch (e) {
                 console.log(e);
             }
@@ -31,13 +32,11 @@ const SecurityList = ( {parentPortfolio}) => {
     return (
         <View>
             <FlatList 
-                data={securities}
+                data={trades}
                 renderItem={({item}) => 
-                <Pressable onPress={() => navigation.navigate("Security", {name: item.company, code: item.securityCode, currency: item.currency, 
-                    price1: item.price1, price2: item.price2, price3: item.price3, price4: item.price4, price5: item.price5, date1: item.priceOneDate,
-                    date2: item.priceTwoDate, date3: item.priceThreeDate, date4: item.priceFourDate, date5: item.priceFiveDate})}>
-                    <Security security={item}/>
-                </Pressable>
+                <Text style={{marginBottom: 25}}>
+                    <TradingListElement trade={item}/>
+                </Text>
                 }
                 
             />
@@ -45,4 +44,4 @@ const SecurityList = ( {parentPortfolio}) => {
     );
 };
 
-export default SecurityList;
+export default TradingActivityList;
