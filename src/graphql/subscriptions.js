@@ -175,6 +175,7 @@ export const onCreateSecurity = /* GraphQL */ `
           type
           dateOfTransaction
           amount
+          company
           createdAt
           updatedAt
         }
@@ -248,6 +249,7 @@ export const onUpdateSecurity = /* GraphQL */ `
           type
           dateOfTransaction
           amount
+          company
           createdAt
           updatedAt
         }
@@ -321,6 +323,7 @@ export const onDeleteSecurity = /* GraphQL */ `
           type
           dateOfTransaction
           amount
+          company
           createdAt
           updatedAt
         }
@@ -564,6 +567,7 @@ export const onCreateTradingActivity = /* GraphQL */ `
       type
       dateOfTransaction
       amount
+      company
       securityInvolved {
         id
         securityCode
@@ -617,6 +621,7 @@ export const onUpdateTradingActivity = /* GraphQL */ `
       type
       dateOfTransaction
       amount
+      company
       securityInvolved {
         id
         securityCode
@@ -670,6 +675,7 @@ export const onDeleteTradingActivity = /* GraphQL */ `
       type
       dateOfTransaction
       amount
+      company
       securityInvolved {
         id
         securityCode

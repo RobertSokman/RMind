@@ -132,6 +132,7 @@ export const getSecurity = /* GraphQL */ `
           type
           dateOfTransaction
           amount
+          company
           createdAt
           updatedAt
         }
@@ -339,6 +340,7 @@ export const getTradingActivity = /* GraphQL */ `
       type
       dateOfTransaction
       amount
+      company
       securityInvolved {
         id
         securityCode
@@ -401,6 +403,7 @@ export const listTradingActivitys = /* GraphQL */ `
         type
         dateOfTransaction
         amount
+        company
         securityInvolved {
           id
           securityCode

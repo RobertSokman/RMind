@@ -73,5 +73,6 @@ type TradingActivity @model @key(name: "with", fields: ["securityId"]){
   type: String
   dateOfTransaction: String
   amount: Float
+  company: String
   securityInvolved: Security @connection(fields: ["securityId"])
 }
