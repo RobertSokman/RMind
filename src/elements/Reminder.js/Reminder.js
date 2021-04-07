@@ -3,6 +3,7 @@ import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
+
 const Reminder = (props) => {
     const reminder = props.reminder;
     return (

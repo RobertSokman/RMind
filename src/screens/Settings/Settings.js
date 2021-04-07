@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import { Container, Header, Content, List, ListItem, Text, Separator,Icon, Form, Picker,
  Radio, Right, Left, Label, Title } from 'native-base';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 
 export default class Settings extends Component {
@@ -34,7 +34,7 @@ export default class Settings extends Component {
  <Text> Relationship Manager ID </Text>
  </ListItem>
  <Separator bordered>
- <Text style={{fontSize:13, textAlign:"left", height:15}}>NOTIFICATION SETTINGS: (select to change frenquncy)</Text>
+ <Text style={{fontSize:13, textAlign:"left", height:15}}>NOTIFICATION SETTINGS: (select to change frequency)</Text>
  
  </Separator>
  
@@ -59,11 +59,11 @@ export default class Settings extends Component {
  <Separator bordered>
  <Text>Others</Text>
  </Separator>
- <ListItem>
- <Text>??</Text>
- </ListItem>
+
  <ListItem last>
- <Text>?? </Text>
+ <Pressable onPress={() => console.warn('Signed out')}>
+    <Text>Sign out</Text>
+ </Pressable>
  </ListItem>
  
 

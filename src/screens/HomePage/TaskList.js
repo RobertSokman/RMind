@@ -19,7 +19,7 @@ const TaskList = (props) => {
     var month = (today.getMonth() + 1).toString().padStart(2, '0');
     var year = today.getFullYear();
     const date1= year + '-' + month + '-' + date;
-    const date2= date + '/' + month + '/' + year;
+    const date2= date + '.' + month + '.' + year;
 
     useEffect(() => {
         const fetchClients = async () => {

@@ -5,14 +5,11 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 import {useNavigation} from '@react-navigation/native';
 import Reminder from '../Reminder.js/Reminder';
-
-import CurrentDateFilter from './CurrentDateFilter';
-
 import { API, graphqlOperation } from "aws-amplify";
 import { listReminders } from "../../graphql/queries";
 
 const TabOne = (props) => {
-    const date = <CurrentDateFilter />;
+    
     const navigation = useNavigation();
     const [reminders, setReminders] = useState([]);
 

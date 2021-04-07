@@ -13,9 +13,7 @@ export default class TabsExample extends Component {
           <Tab heading="All">
             <TabOne />
           </Tab>
-          <Tab heading="Week">
-            <TabTwo />
-          </Tab>
+          
           <Tab heading="Today">
             <TabThree />
           </Tab>

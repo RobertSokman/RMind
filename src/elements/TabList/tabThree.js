@@ -4,14 +4,9 @@ import { Dimensions, View, FlatList } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 import {useNavigation} from '@react-navigation/native';
-import reminders from '../../../assets/data/reminders';
 import Reminder from '../Reminder.js/Reminder';
-import GetCurrentDate from './CurrentDate';
 import { API, graphqlOperation } from "aws-amplify";
 import { listReminders } from "../../graphql/queries";
-import CurrentDateFilter from './CurrentDateFilter';
-
-
 
 
 const TabThree = (props) => {
@@ -24,6 +19,7 @@ const TabThree = (props) => {
     var month = (today.getMonth() + 1).toString().padStart(2, '0');
     var year = today.getFullYear();
     const date1= year + '-' + month + '-' + date;
+    const date2= date + '.' + month + '.' + year;
 
     useEffect(() => {
         const fetchClients = async () => {
@@ -41,7 +37,7 @@ const TabThree = (props) => {
 
     return (
       <View style={{flex: 1}}>
-        <Text style={{height: 25, textAlign: "center", marginTop: 10}}><GetCurrentDate /></Text>
+        <Text style={{height: 25, textAlign: "center", marginTop: 10}}>{date2}</Text>
         <FlatList 
             data={reminders}
             renderItem={({item}) => 
