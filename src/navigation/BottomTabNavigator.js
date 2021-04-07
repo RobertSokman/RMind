@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Reminders from "../screens/Reminders/Reminders";
 import Fontisto from 'react-native-vector-icons/Fontisto';
-import Screen1 from '../screens/Screen1';
+import Screen1 from '../screens/HomePage/Screen1';
 import { color } from 'react-native-reanimated';
 import Settings from "../screens/Settings/Settings";
 import StockList from "../screens/StockList/StockList";

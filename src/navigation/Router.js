@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Reminders from "../screens/Reminders/Reminders";
-import Screen1 from '../screens/Screen1';
+import Screen1 from '../screens/HomePage/Screen1';
 import BottomTabNavigator from "./BottomTabNavigator";
 import Settings from "../screens/Settings/Settings";
 import StockList from "../screens/StockList/StockList";
