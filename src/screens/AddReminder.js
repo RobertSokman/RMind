@@ -35,7 +35,7 @@ const AddReminder = (props) => {
           onChangeText={text => onChangeText1(text)}
           value1={value1}
           />
-          <Text>Date (YYYY/MM/DD)</Text>
+          <Text>Date (YYYY-MM-DD)</Text>
           <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1, borderRadius: 12, width: windowWidth-40, alignSelf: "center", marginTop: 5 }}
           onChangeText={text => onChangeText(text)}
