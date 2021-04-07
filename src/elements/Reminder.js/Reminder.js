@@ -1,14 +1,51 @@
-import React from 'react';
-import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import {View, Text, Image, StyleSheet, Dimensions, Pressable} from 'react-native';
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
+import { deleteReminder } from '../../graphql/mutations';
+import { API, Auth, graphqlOperation } from 'aws-amplify';
+
+import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 
 
 const Reminder = (props) => {
     const reminder = props.reminder;
+
+    /*const [reminders, setReminders] = useState([]);
+
+  useEffect(() => {
+    const fetchReminders= async () => {
+      try {
+        const remindersResult = await API.graphql(graphqlOperation
+          (deleteReminder, {input: {description: reminder.description}})
+        )
+          setReminders(remindersResult.data.deleteReminder.items);
+        }                                
+        catch (e) {
+        console.log(e);
+        }
+      }
+      fetchReminders();
+    }, [])*/
+    const lalala = reminder.description;
+    const deleteDescription = async () => {
+      try {
+        await API.graphql(graphqlOperation
+          (deleteReminder, {input: {description: {eq: lalala}}}))
+        }                                
+        catch (e) {
+        console.log(e);
+        }
+      }
+
     return (
       <View style={{flexDirection: 'row', borderColor: 'lightgray', borderBottomWidth: 0.5}} >
-          <Text style={styles.security}>{reminder.name} {reminder.description}</Text>
+          <Text style={styles.security}>{reminder.description}</Text>
+          <Pressable 
+              style={{alignSelf: 'center', marginRight: windowWidth/30}}
+              onPress= {deleteDescription}>
+            <MaterialIcons name="done" size={25} color={'red'} /> 
+          </Pressable>
       </View>
     )
   }

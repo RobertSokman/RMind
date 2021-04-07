@@ -17,7 +17,7 @@ const AddReminder = (props) => {
 
   const newDescription = async () => {
     try {
-      const Description1 = await API.graphql(graphqlOperation
+      await API.graphql(graphqlOperation
         (createReminder, {input: {description: value1, dueDate: value2}}))
       }                                
       catch (e) {
@@ -34,12 +34,14 @@ const AddReminder = (props) => {
           style={{ height: 40, borderColor: 'gray', borderWidth: 1, borderRadius: 12, width: windowWidth-40, alignSelf: "center", marginTop: 5 }}
           onChangeText={text => onChangeText1(text)}
           value1={value1}
+          placeholder="Description"
           />
           <Text>Date (YYYY-MM-DD)</Text>
           <TextInput
           style={{ height: 40, borderColor: 'gray', borderWidth: 1, borderRadius: 12, width: windowWidth-40, alignSelf: "center", marginTop: 5 }}
           onChangeText={text => onChangeText(text)}
           value2={value2}
+          placeholder="YYYY-MM-DD"
           />
 
 
