@@ -36,6 +36,7 @@ const AmplifyTheme = StyleSheet.create({
     color: deepSquidInk,
     fontSize: 20,
     fontWeight: '500',
+    alignSelf: 'center'
   },
  /* sectionFooter: {  //this is the footer where sign up button is
     width: '100%',
@@ -51,6 +52,7 @@ const AmplifyTheme = StyleSheet.create({
     color: '#30d0fe',
     alignItems: 'baseline',
     textAlign: 'center',
+    alignSelf: 'center',
   },
   navBar: {
     marginTop: 35,
@@ -71,11 +73,12 @@ const AmplifyTheme = StyleSheet.create({
   errorRow: {
     flexDirection: 'row',
     justifyContent: 'center',
-
+    alignSelf: 'center'
   },
   errorRowText: { //for Username cannot be emty text
     marginLeft: 0,
     color: 'red',
+
   },
   photo: {
     width: '100%',
@@ -86,7 +89,10 @@ const AmplifyTheme = StyleSheet.create({
   button: {   ////this is for sign in
     backgroundColor: '#30d0fe',
     alignItems: 'center',
+    alignSelf: 'center',
     padding: 16,
+    borderRadius: 30,
+    width: windowWidth/2,
   },
   buttonDisabled: {
     backgroundColor: '#85E4FF',
@@ -104,11 +110,12 @@ const AmplifyTheme = StyleSheet.create({
   input: { //for input fields boxes
     padding: 16,
     borderWidth: 1,
-    borderRadius: 3,
+    borderRadius: 30,
     borderColor: '#C4C4C4',
   },
   inputLabel: {  // for input field texts
     marginBottom: 8,
+    marginLeft: 10
   },
   phoneContainer: {
     display: 'flex',
