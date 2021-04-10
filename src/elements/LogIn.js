@@ -1,10 +1,16 @@
+import { SignIn } from 'aws-amplify-react-native/dist/Auth';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-export default class App extends React.Component {
+export default class Login extends SignIn {
   state={
     username:"",
     password:""
+  }
+
+  constructor(props) {
+    super(props)
+    this._validAuthStates = ['signIn', 'signedOut', 'signedUp']
   }
   render(){
     return (

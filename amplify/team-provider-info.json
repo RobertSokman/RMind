@@ -10,6 +10,11 @@
       "StackName": "amplify-rmind-dev-125304",
       "StackId": "arn:aws:cloudformation:eu-west-2:558181573771:stack/amplify-rmind-dev-125304/29911650-8fbc-11eb-8329-0232b5dbc2bc",
       "AmplifyAppId": "ddek305v64pzl"
+    },
+    "categories": {
+      "auth": {
+        "rmind78a4deb9": {}
+      }
     }
   }
 }

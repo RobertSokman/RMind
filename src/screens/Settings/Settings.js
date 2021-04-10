@@ -2,9 +2,13 @@ import React, { Component} from 'react';
 import { Container, Header, Content, List, ListItem, Text, Separator,Icon, Form, Picker,
  Radio, Right, Left, Label, Title } from 'native-base';
 import { Pressable, View } from 'react-native';
-
+import { Auth } from 'aws-amplify';
+import SignOutButton from './SignOutButton';
 
 export default class Settings extends Component {
+
+
+
  constructor(props) {
  super(props);
  this.state = {
@@ -61,9 +65,7 @@ export default class Settings extends Component {
  </Separator>
 
  <ListItem last>
- <Pressable onPress={() => console.warn('Signed out')}>
-    <Text>Sign out</Text>
- </Pressable>
+ <Text><SignOutButton/></Text>
  </ListItem>
  
 
