@@ -14,8 +14,8 @@ const StockList = () => {
   return (
     <Container>
       <View style={{flex: 1}}>
-        <Header style={{height: 44, backgroundColor: 'white'}}>
-          <Title style={{ textAlign: "center", marginTop:10,}}>Stock List page</Title>
+        <Header style={{height: 44, backgroundColor: '#003662'}}>
+          <Title style={{ textAlign: "center", marginTop:10, color: 'white'}}>Stock List page</Title>
         </Header>
         <SearchButton />
         <SafeAreaView style={{ marginTop: 55, flex:1}}>

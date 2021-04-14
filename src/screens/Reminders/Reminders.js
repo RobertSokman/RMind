@@ -11,9 +11,9 @@ const Reminders = () => {
   const navigation = useNavigation();
   return (
     <Container >
-      <Header style={{height: 44, backgroundColor: 'white'}}>
-        <Title style={{ textAlign: "center", marginTop:10}}>Reminders</Title>
-        <Icon name="add" size={25} color={'#f15454'} style={{marginTop: 5}} onPress={() => navigation.navigate("Add Reminder")}/>
+      <Header style={{height: 44, backgroundColor: '#003662'}}>
+        <Title style={{ textAlign: "center", marginTop:10, color:'white'}}>Reminders</Title>
+        <Icon name="add" size={25} color={'#f15454'} style={{marginTop: 5, color:'white'}} onPress={() => navigation.navigate("Add Reminder")}/>
       </Header>
       <TabsExample /> 
     </Container>

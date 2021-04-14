@@ -11,7 +11,7 @@ const SignOutButton = () => {
 
   return (
       <Pressable onPress={signOut}>
-          <Text>Sign out</Text>
+          <Text style={{ fontWeight:"300", fontSize:16,marginBottom:-4, fontWeight:"400"}}>Sign out</Text>
     </Pressable>
   )
 }

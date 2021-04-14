@@ -67,9 +67,9 @@ class MySignIn extends SignIn {
     return(
       <Container>
         <View>
-          <ImageBackground source={require('./assets/skyBackground.jpg')} style={{width: windowWidth, height: windowHeight}}>
+          <ImageBackground source={require('./assets/CS3.jpg')} style={{width: windowWidth, height: windowHeight}}>
             <Image
-              style={{width: windowWidth, height: windowHeight/10, marginTop: windowHeight/10}}
+              style={{width: windowWidth, height: windowHeight/8, marginTop: windowHeight/10}}
               source={require('./assets/Logo.png')}
             />
             
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
   },
   inputText:{
     height:50,
-    color:"white",
+    color:"black",
   },
   forgot:{
     color:"white",

@@ -11,8 +11,8 @@ const ClientList = () => {
   return (
     <Container>
       <View style={{flex:1}}>
-        <Header style={{height: 44, backgroundColor: 'white'}}>
-          <Title style={{ textAlign: "center", marginTop:10}}>Client list</Title>
+        <Header style={{height: 44, backgroundColor: '#003662'}}>
+          <Title style={{ textAlign: "center", marginTop:10, color: 'white'}}>Client list</Title>
         </Header>
         <SafeAreaView style={{flex:1, flexDirection: 'row'}}>
          <ClientListItem />
