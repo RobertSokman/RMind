@@ -432,3 +432,42 @@ export const listTradingActivitys = /* GraphQL */ `
     }
   }
 `;
+export const getMySecurity = /* GraphQL */ `
+  query GetMySecurity($id: ID!) {
+    getMySecurity(id: $id) {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listMySecuritys = /* GraphQL */ `
+  query ListMySecuritys(
+    $filter: ModelMySecurityFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listMySecuritys(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        amount
+        dateOfTransaction
+        portfolioNo
+        securityCode
+        securityNo
+        type
+        company
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

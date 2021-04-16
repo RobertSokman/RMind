@@ -23,8 +23,7 @@ Amplify.configure(config)
 import { withAuthenticator } from 'aws-amplify-react-native'
 import { AmplifyTheme } from './src/screens/AmplifyTheme/index'
 import { Container } from 'aws-amplify-react-native/dist/AmplifyUI';
-import { set, Value } from 'react-native-reanimated';
-
+import { useEffect } from 'react/cjs/react.development';
 
 const App = () => {
   
@@ -52,12 +51,17 @@ class MySignIn extends SignIn {
     this.setState({ password: text })
   }
   */
+   
   render() {
-    /*const [userN, setUserN] = useState('');  
-    const [code, setCode] = useState('');*/
-    
-    async function signIn() {
+        
+    const lala = async function signIn() {
+        
       try {
+        
+        //setUserN({ userN: {onChangeText}})
+        //setCode({ code: onChangeCode})
+        //const [userN, setUserN] = useState([]);  
+        //const [code, setCode] = useState([]); 
           const user = await Auth.signIn('Robert', 'password');
       } catch (error) {
           console.log('error signing in', error);
@@ -65,9 +69,10 @@ class MySignIn extends SignIn {
     }
     
     return(
+      
       <Container>
         <View>
-          <ImageBackground source={require('./assets/CS3.jpg')} style={{width: windowWidth, height: windowHeight}}>
+          <ImageBackground source={require('./assets/skyline.jpeg')} style={{width: windowWidth, height: windowHeight+20}}>
             <Image
               style={{width: windowWidth, height: windowHeight/8, marginTop: windowHeight/10}}
               source={require('./assets/Logo.png')}
@@ -80,7 +85,8 @@ class MySignIn extends SignIn {
               placeholder="Username" 
               placeholderTextColor="#003f5c"
               //onChangeText={() => setUserN({ userN: text})}
-              //onChangeText={this.handleUsername}
+              //onChangeText={() => {onChangeText}}
+              //value={userN}
               />
             </View>
             <View style={styles.inputView} >
@@ -89,11 +95,12 @@ class MySignIn extends SignIn {
               style={styles.inputText}
               placeholder="Password" 
               placeholderTextColor="#003f5c"
-              //onChangeText={() => setCode({ password: text})}
-              //onChangeText={this.handlePassword}
+              //onChangeText={() => setCode({ code: text})}
+              //onChangeText={() => {onChangeCode}}
+              //value={code}
               />
             </View>
-            <Pressable onPress = { signIn } 
+            <Pressable onPress = { lala } 
             style={styles.loginBtn}>
               <Text style={{color: "white", textAlign:"center"}}>Sign in</Text>
             </Pressable>

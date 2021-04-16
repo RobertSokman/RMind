@@ -36,7 +36,7 @@ const PortfolioFullList = ( {owner} ) => {
                 data={portfolios}
 
                 renderItem={({ item }) =>
-                    <Pressable onPress={() => navigation.navigate("Portfolio", { pid: item.portfolioNo, pidNumerical: item.portfolioNoNumerical })}
+                    <Pressable onPress={() => navigation.navigate("Portfolio", { pid: item.portfolioNo, pidNumerical: item.portfolioNoNumerical, initialValue: item.initialValue })}
                         style={{ marginTop: 10 }}>
                         <PortfolioItem portfolio={item} />
                     </Pressable>

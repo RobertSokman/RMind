@@ -7,22 +7,22 @@ import {useNavigation} from '@react-navigation/native';
 import OneStock from "../OneStock/OneStock";
 import { Item } from "native-base";
 import { API, graphqlOperation } from "aws-amplify";
-import { listTradingActivitys } from "../../graphql/queries";
-import TradingListElement from "./TradingListElement";
+import { listMySecuritys } from "../../graphql/queries";
+import MySecurityListElement from "./MySecurityListElement";
 
-const TradingActivityList = ( {parentPortfolio}) => {
+const MySecurityList = ( {parentPortfolio}) => {
     const navigation = useNavigation();
     
-    const [trades, setTrades] = useState([]);
+    const [securities, setSecurities] = useState([]);
     const parentPortfolioNo = parentPortfolio;
 
     useEffect(() => {
         const fetchClients = async () => {
             try {
-                const tradesResult = await API.graphql(
-                    graphqlOperation(listTradingActivitys, {filter: { portfolioNo: { eq: parentPortfolioNo } }})
+                const securitiesResult = await API.graphql(
+                    graphqlOperation(listMySecuritys, {filter: { portfolioNo: { eq: parentPortfolioNo } }})
                     )
-                setTrades(tradesResult.data.listTradingActivitys.items);
+                setSecurities(securitiesResult.data.listMySecuritys.items);
             } catch (e) {
                 console.log(e);
             }
@@ -32,12 +32,12 @@ const TradingActivityList = ( {parentPortfolio}) => {
     return (
         <View>
             <Text style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold', marginBottom: 10, backgroundColor: '#003662', 
-            height: windowHeight/22, color: 'white', alignContent:'center'}}>Trading Activity history:</Text>
+            height: windowHeight/22, color: 'white', alignContent:'center'}}>List of securities in this portfolio:</Text>
             <FlatList 
-                data={trades}
+                data={securities}
                 renderItem={({item}) => 
                 <Text style={{marginBottom: 25}}>
-                    <TradingListElement trade={item}/>
+                    <MySecurityListElement security={item}/>
                 </Text>
                 }
                 
@@ -46,4 +46,4 @@ const TradingActivityList = ( {parentPortfolio}) => {
     );
 };
 
-export default TradingActivityList;
+export default MySecurityList;

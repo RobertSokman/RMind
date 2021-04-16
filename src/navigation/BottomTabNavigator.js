@@ -20,9 +20,9 @@ const BottomTabNavigator = (props) => {
     return (
         <Tab.Navigator 
             tabBarOptions={{
-                activeTintColor: 'blue',
-                inactiveBackgroundColor: '#f5f5f5',
-                activeBackgroundColor: '#f5f5f5',
+                //activeTintColor: 'blue',
+                inactiveBackgroundColor: 'white',
+                activeBackgroundColor: 'white',
                 style: { height: windowHeight/12},
                 getLabelText: false,
                 initialRouteName: "Screen1",           
@@ -33,7 +33,7 @@ const BottomTabNavigator = (props) => {
                 options={{
                    
                     tabBarIcon: ({ string }) => (
-                        <Icon name="ios-people-outline" size={25} color={'#f15454'} /> 
+                        <Icon name="ios-people-outline" style={{size:25, color:'black'}} /> 
                     ),
                 }} 
             />
@@ -43,7 +43,7 @@ const BottomTabNavigator = (props) => {
                 options={{
                     headerShown: false,
                     tabBarIcon: ({ string }) => (
-                        <Icon name="ios-bar-chart-outline" size={25} color={'#f15454'}/> 
+                        <Icon name="ios-bar-chart-outline" style={{size:25, color:'black'}}/> 
                     ),
                 }} 
             />
@@ -52,7 +52,7 @@ const BottomTabNavigator = (props) => {
                 component={Screen1}
                 options={{
                     tabBarIcon: ({ string }) => (
-                        <Icon name="home" size={25} color={'#f15454'}/> 
+                        <Icon name="home" style={{size:25, color:'black'}}/> 
                     ),
                 }}
                 initialRouteName 
@@ -62,7 +62,7 @@ const BottomTabNavigator = (props) => {
                 component={Reminders}
                 options={{
                     tabBarIcon: ({ string }) => (
-                        <Icon name="alarm-outline" size={25} color={'#f15454'}/> 
+                        <Icon name="alarm-outline" style={{size:25, color:'black'}}/> 
                     ),
                 }} 
             />
@@ -71,7 +71,7 @@ const BottomTabNavigator = (props) => {
                 component={Settings}
                 options={{
                     tabBarIcon: ({ string }) => (
-                        <Icon name="settings-outline" size={25} color={'#f15454'}/> 
+                        <Icon name="settings-outline" style={{size:25, color:'black'}}/> 
                     ),
                 }} 
             />

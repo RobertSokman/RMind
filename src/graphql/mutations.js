@@ -763,3 +763,60 @@ export const deleteTradingActivity = /* GraphQL */ `
     }
   }
 `;
+export const createMySecurity = /* GraphQL */ `
+  mutation CreateMySecurity(
+    $input: CreateMySecurityInput!
+    $condition: ModelMySecurityConditionInput
+  ) {
+    createMySecurity(input: $input, condition: $condition) {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateMySecurity = /* GraphQL */ `
+  mutation UpdateMySecurity(
+    $input: UpdateMySecurityInput!
+    $condition: ModelMySecurityConditionInput
+  ) {
+    updateMySecurity(input: $input, condition: $condition) {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteMySecurity = /* GraphQL */ `
+  mutation DeleteMySecurity(
+    $input: DeleteMySecurityInput!
+    $condition: ModelMySecurityConditionInput
+  ) {
+    deleteMySecurity(input: $input, condition: $condition) {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;

@@ -718,3 +718,51 @@ export const onDeleteTradingActivity = /* GraphQL */ `
     }
   }
 `;
+export const onCreateMySecurity = /* GraphQL */ `
+  subscription OnCreateMySecurity {
+    onCreateMySecurity {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateMySecurity = /* GraphQL */ `
+  subscription OnUpdateMySecurity {
+    onUpdateMySecurity {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteMySecurity = /* GraphQL */ `
+  subscription OnDeleteMySecurity {
+    onDeleteMySecurity {
+      id
+      amount
+      dateOfTransaction
+      portfolioNo
+      securityCode
+      securityNo
+      type
+      company
+      createdAt
+      updatedAt
+    }
+  }
+`;
