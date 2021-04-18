@@ -31,12 +31,12 @@ const MySecurityList = ( {parentPortfolio}) => {
     }, [])
     return (
         <View>
-            <Text style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold', marginBottom: 10, backgroundColor: '#003662', 
-            height: windowHeight/22, color: 'white', alignContent:'center'}}>List of securities in this portfolio:</Text>
+            <Text style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold', backgroundColor: 'white', 
+            height: windowHeight/22, color: '#003662', alignContent:'center', width: windowWidth/1.5, alignSelf: 'center'}}>List of securities in this portfolio:</Text>
             <FlatList 
                 data={mySecurities}
                 renderItem={({item}) => 
-                <Text style={{marginBottom: 25}}>
+                <Text style={{marginBottom: 10}}>
                     <MySecurityListElement mySecurity={item}/>
                 </Text>
                 }

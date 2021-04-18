@@ -31,12 +31,13 @@ const TradingActivityList = ( {parentPortfolio}) => {
     }, [])
     return (
         <View>
-            <Text style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold', marginBottom: 10, backgroundColor: '#003662', 
-            height: windowHeight/22, color: 'white', alignContent:'center'}}>Trading Activity history:</Text>
+            <Text style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold', backgroundColor: 'white', 
+            height: windowHeight/22, color: '#003662', alignContent:'center', marginTop: 10}}>Trading Activity history:</Text>
             <FlatList 
+                style={{marginTop: 5}}
                 data={trades}
                 renderItem={({item}) => 
-                <Text style={{marginBottom: 25}}>
+                <Text style={{marginBottom: 35}}>
                     <TradingListElement trade={item}/>
                 </Text>
                 }

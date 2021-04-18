@@ -11,24 +11,23 @@ import MySecurityList from "./MySecurityList";
 const Portfolio = ({route}) => {
   const navigation = useNavigation();
   const { pid, pidNumerical, initialValue } = route.params;
+  const lala = pidNumerical;
   return (
     <Container>
-      <View style={{alignItems: "center", marginTop: windowHeight/25}}>
-          <Text>Portfolio ID:</Text>
-          <Text>{pid}</Text>
-          <Text>Value: {initialValue} $</Text>
+      <View style={{alignItems: "center", marginTop: windowHeight/40, marginBottom:10}}>
+          <Text style={{fontWeight:"bold", fontSize: 18 , color:"#003662"}}>Portfolio ID: {pid}</Text>
+          <Text style={{fontWeight:"bold", fontSize: 18, color:"#003662"}}>Value: {initialValue} $</Text>
       </View>
       
-      <SafeAreaView style={{ marginTop: 55, flex:1}}>
+      <SafeAreaView style={{ marginTop: 0, flex:1}}>
           <MySecurityList parentPortfolio = {pidNumerical}/>
       </SafeAreaView>
-      
-      <SafeAreaView style={{ marginTop: 55, flex:1}}>
-          <TradingActivityList parentPortfolio = {pidNumerical}/>
-      </SafeAreaView>
-          
-      
-      
+
+      <View style={{marginTop: 80}}>
+        <Pressable  style={{marginBottom: 50, marginRight: 20}} onPress={() => navigation.navigate("Trading History", {papa: lala})}>
+            <Text style={{color: "#003662", alignSelf:"flex-end", marginRight: 10, textAlignVertical: "center"}}>See trading history</Text>
+        </Pressable>
+      </View>
     </Container>
     
     

@@ -6,8 +6,8 @@ const windowWidth = Dimensions.get('window').width;
 const TradingListElement = (props) => {
     const mySecurity = props.mySecurity;
     return (
-      <View >
-          <Text style={styles.security}>Security name: {mySecurity.company} {mySecurity.type}</Text>
+      <View style={{borderBottomColor: 'black', borderBottomWidth: 0.5, width: windowWidth}}>
+          <Text style={styles.security}>- {mySecurity.company}</Text>
           <Text style={styles.security}>Amount: {mySecurity.amount}</Text>
       </View>
     )
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   security: {
     fontSize: 16,
     //justifyContent: 'center',
-    flex: 2,
+    //flex: 2,
     marginBottom:15,
     marginLeft: 10,
   },

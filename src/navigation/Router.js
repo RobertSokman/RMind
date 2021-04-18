@@ -11,6 +11,7 @@ import OneStock from "../screens/OneStock/OneStock";
 import AddReminder from '../screens/AddReminder';
 import Profile from '../screens/Profile/Profile';
 import Portfolio from '../screens/Portfolio/Portfolio';
+import TradingHistory from '../screens/Portfolio/TradingHistory';
 
 const Stack = createStackNavigator();
 
@@ -69,6 +70,11 @@ const Router = () => {
                 <Stack.Screen 
                     name={"Portfolio"}
                     component={ Portfolio }
+                    options={{headerShown: true,}}
+                /> 
+                <Stack.Screen 
+                    name={"Trading History"}
+                    component={ TradingHistory }
                     options={{headerShown: true,}}
                 /> 
             </Stack.Navigator>
