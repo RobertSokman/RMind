@@ -4,11 +4,11 @@ const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
 const TradingListElement = (props) => {
-    const security = props.security;
+    const mySecurity = props.mySecurity;
     return (
       <View >
-          <Text style={styles.security}>Security name: {security.company}</Text>
-          <Text style={styles.security}>Amount: {security.amount}</Text>
+          <Text style={styles.security}>Security name: {mySecurity.company} {mySecurity.type}</Text>
+          <Text style={styles.security}>Amount: {mySecurity.amount}</Text>
       </View>
     )
   }

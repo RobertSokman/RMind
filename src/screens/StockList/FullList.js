@@ -18,7 +18,7 @@ const FullList = (props) => {
         const fetchClients = async () => {
             try {
                 const securitiesResult = await API.graphql(
-                    graphqlOperation(listSecuritys)
+                    graphqlOperation(listSecuritys, { limit: 1000} )
                     )
                 setSecurities(securitiesResult.data.listSecuritys.items);
             } catch (e) {

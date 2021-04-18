@@ -20,7 +20,7 @@ const TradingActivityList = ( {parentPortfolio}) => {
         const fetchClients = async () => {
             try {
                 const tradesResult = await API.graphql(
-                    graphqlOperation(listTradingActivitys, {filter: { portfolioNo: { eq: parentPortfolioNo } }})
+                    graphqlOperation(listTradingActivitys, {filter: { portfolioNo: { eq: parentPortfolioNo } }, limit: 1000})
                     )
                 setTrades(tradesResult.data.listTradingActivitys.items);
             } catch (e) {
