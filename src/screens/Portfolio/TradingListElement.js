@@ -9,7 +9,7 @@ const TradingListElement = (props) => {
       <View  >
           <Text style={styles.security}>Date of transaction: {trade.dateOfTransaction}</Text>
           <Text style={styles.security}>Trading Activity: {trade.type}</Text>
-          <Text style={styles.security}>Security name: {trade.company}</Text>
+          <Text style={{width: windowWidth, fontSize: 16, marginBottom: 15, marginLeft: 10}}>Security name: {trade.company}</Text>
           
           <Text style={styles.security}>Initial amount: {trade.amount}</Text>
       </View>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     //justifyContent: 'center',
     flex: 2,
     marginBottom:15,
-    marginLeft: 10,
+    marginLeft: 10
   },
   
 });
