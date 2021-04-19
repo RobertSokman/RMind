@@ -4,20 +4,33 @@ import { Dimensions, Pressable } from 'react-native';
 import Fontisto from "react-native-vector-icons/Fontisto";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
+import { SearchBar } from 'react-native-elements';
 
+export default class Lala extends React.Component {
+  state = {
+    search: '',
+  };
 
-const SearchButton = (props) => {
+  updateSearch = (search) => {
+    this.setState({ search });
+  };
+
+  render() {
+    const { search } = this.state;
+
     return (
-        <Pressable 
-            style={styles.searchButton} 
-            onPress={() => console.warn('SearchButton was clicked')}
-        >
-            <Fontisto name="search" size={20} color={'black'} style={{marginLeft: 15}}/>             
-        </Pressable>
-  )
+      <SearchBar
+        placeholder="Type Here..."
+        onChangeText={this.updateSearch}
+        value={search}
+        //ref={ search => this.search.clear() = search}
+        
+      />
+    );
+  }
 }
 
-export default SearchButton;
+
 
 const styles = StyleSheet.create({
 

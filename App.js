@@ -24,6 +24,7 @@ import { withAuthenticator } from 'aws-amplify-react-native'
 import { AmplifyTheme } from './src/screens/AmplifyTheme/index'
 import { Container } from 'aws-amplify-react-native/dist/AmplifyUI';
 import { useEffect } from 'react/cjs/react.development';
+import MySignIn from './MySignIn';
 
 const App = () => {
   
@@ -39,78 +40,6 @@ const App = () => {
   );
 }
 
-class MySignIn extends SignIn {
-  /*state = {
-    username: '',
-    password: ''
-  }
-  handleUsername = (text) => {
-    this.setState({ username: text })
-  }
-  handlePassword = (text) => {
-    this.setState({ password: text })
-  }
-  */
-   
-  render() {
-        
-    const lala = async function signIn() {
-        
-      try {
-        
-        //setUserN({ userN: {onChangeText}})
-        //setCode({ code: onChangeCode})
-        //const [userN, setUserN] = useState([]);  
-        //const [code, setCode] = useState([]); 
-          const user = await Auth.signIn('Robert', 'password');
-      } catch (error) {
-          console.log('error signing in', error);
-      }
-    }
-    
-    return(
-      
-      <Container>
-        <View>
-          <ImageBackground source={require('./assets/skyline.jpeg')} style={{width: windowWidth, height: windowHeight+20}}>
-            <Image
-              style={{width: windowWidth, height: windowHeight/8, marginTop: windowHeight/10}}
-              source={require('./assets/Logo.png')}
-            />
-            
-            <View style={{marginTop: windowHeight/3}}>
-            <View style={styles.inputView}>
-            <TextInput  
-              style={styles.inputText}
-              placeholder="Username" 
-              placeholderTextColor="#003f5c"
-              //onChangeText={() => setUserN({ userN: text})}
-              //onChangeText={() => {onChangeText}}
-              //value={userN}
-              />
-            </View>
-            <View style={styles.inputView} >
-            <TextInput  
-              secureTextEntry
-              style={styles.inputText}
-              placeholder="Password" 
-              placeholderTextColor="#003f5c"
-              //onChangeText={() => setCode({ code: text})}
-              //onChangeText={() => {onChangeCode}}
-              //value={code}
-              />
-            </View>
-            <Pressable onPress = { lala } 
-            style={styles.loginBtn}>
-              <Text style={{color: "white", textAlign:"center"}}>Sign in</Text>
-            </Pressable>
-            </View>
-            
-          </ImageBackground>
-        </View>
-      </Container>
-    )}
-}
 
 export default withAuthenticator(App,false, [<MySignIn/>], AmplifyTheme)
 

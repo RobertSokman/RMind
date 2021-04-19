@@ -8,27 +8,54 @@ import OneStock from "../OneStock/OneStock";
 import { Item } from "native-base";
 import { API, graphqlOperation } from "aws-amplify";
 import { listSecuritys } from "../../graphql/queries";
+import { TextInput } from "react-native";
 
 const FullList = (props) => {
     const navigation = useNavigation();
     
     const [securities, setSecurities] = useState([]);
+    const [inputText, setInputText] = useState('');
 
     useEffect(() => {
+        if (inputText == '')
+        {
+            const fetchClients = async () => {
+                try {
+                    const securitiesResult = await API.graphql(
+                        graphqlOperation(listSecuritys, { limit: 1000} )
+                        )
+                    setSecurities(securitiesResult.data.listSecuritys.items);
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+            fetchClients();
+        }
+        
+        else
+        {
         const fetchClients = async () => {
             try {
                 const securitiesResult = await API.graphql(
-                    graphqlOperation(listSecuritys, { limit: 1000} )
+                    graphqlOperation(listSecuritys, {filter: { company: { contains: inputText }}}, { limit: 1000} )
                     )
                 setSecurities(securitiesResult.data.listSecuritys.items);
             } catch (e) {
                 console.log(e);
             }
         }
-        fetchClients();
-    }, [])
+    
+        fetchClients();}
+    },[])
     return (
         <View>
+
+            <TextInput
+            placeholder="Type Here..."
+            value={inputText}
+            onChangeText={setInputText}
+            style={{color: 'black'}}
+            />
             <FlatList 
                 data={securities}
                 renderItem={({item}) => 
