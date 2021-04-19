@@ -14,7 +14,7 @@ const ClientList = () => {
         <Header style={{height: 44, backgroundColor: '#003662'}}>
           <Title style={{ textAlign: "center", marginTop:10, color: 'white'}}>Client list</Title>
         </Header>
-        <SafeAreaView style={{flex:1, flexDirection: 'row'}}>
+        <SafeAreaView style={{flex:1}}>
          <ClientListItem />
         </SafeAreaView>
       </View>

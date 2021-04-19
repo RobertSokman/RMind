@@ -29,14 +29,14 @@ const ClientListItem = (props) => {
 
     return (
         <View >
-            <FlatList numColumns={2} 
+            <FlatList 
                 data={clients}
                 renderItem={({item}) => 
                 
                 <Pressable onPress={() => navigation.navigate("Profile", {name: item.name, surname: item.surname, country: item.nationality,
                                                                                birthday: item.birthday, sector: item.sector, language: item.languageOfReporting, 
                                                                             currency: item.reportingCurrency, id: item.id, customerNo: item.customerNo })}
-                           style={{ height: windowHeight/5, marginBottom: 5, width: windowWidth/2}}>
+                >
                     <ClientName client={item} />
                 </Pressable>
                 }

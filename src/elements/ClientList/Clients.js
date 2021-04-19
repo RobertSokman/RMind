@@ -7,11 +7,15 @@ import { Icon } from 'native-base';
 const ClientName = (props) => {
     const client = props.client;
     return (
-      <View style={{height: windowHeight/5, width: windowWidth/2-20, marginLeft: 10}}>
-        <Icon name="person-circle-outline" style={{fontSize: 70, color: "lightblue", textAlign: "center", marginTop: 25}} />   
-        <Text style={{textAlign: "center", fontSize: 24, fontWeight: "bold"}}>{client.name} {client.surname}</Text>
+      <View style={{marginLeft: 10, flexDirection: "row", alignItems: 'center', height: windowHeight/10}}>
+         
+        <Text style={{textAlign: "center", fontSize: 18, fontWeight: "bold"}}>{client.name} {client.surname}</Text>
       </View>
     )
   }
   
 export default ClientName;
+
+/*
+<Icon name="person-circle-outline" style={{fontSize: 50, color: "lightblue", textAlign: "center"}} />  
+*/

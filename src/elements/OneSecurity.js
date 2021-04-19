@@ -6,12 +6,13 @@ const windowWidth = Dimensions.get('window').width;
 
 const Onesecurity = ({name, code, price, currency}) => 
   <View style={{marginTop: 30}}>
-    <Text style={{textAlign: "center",color: "white", alignSelf: "center",fontSize: 22, fontWeight: "bold", backgroundColor: 35297, width: windowWidth-60, height: 40}}>{name}</Text>
-    <View style={{backgroundColor: "lightgray", width: windowWidth-60, height: 100, alignSelf: "center"}}>
-      <Text style={{fontSize: 15,  textAlign: "center",color: 35297, alignSelf: "center", fontWeight: "bold"}}>DESCRIPTION:</Text>
-      <Text style={{fontSize: 15,  textAlign: "center",color: "black", alignSelf: "center",}}>{code}</Text>
-      <Text style={{fontSize: 15,  textAlign: "center",color: "black", alignSelf: "center"}}>Currency: {currency}</Text>
+    
+    <View style={{backgroundColor: "lightgray", width: windowWidth-60,  alignSelf: "center", borderRadius: 20}}>
+      <Text style={{fontSize: 18,  textAlign: "center",color: '#003662', alignSelf: "center", fontWeight: "bold", marginTop: 10}}>{name}</Text>
+      <Text style={{fontSize: 18,  textAlign: "center",color: "black", alignSelf: "center",}}>Security code: {code}</Text>
+      <Text style={{fontSize: 18,  textAlign: "center",color: "black", alignSelf: "center"}}>Trading currency: {currency}</Text>
+      <Text style={{textAlign: "center", fontSize: 18, marginTop: 20, marginBottom: 10}}>Current price: {price} $</Text>
      </View>
-     <Text style={{textAlign: "center", fontSize: 40, marginTop: 20}}>{price} $</Text>
+     
   </View>
 export default Onesecurity;
