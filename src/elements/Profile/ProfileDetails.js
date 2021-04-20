@@ -10,31 +10,39 @@ const windowWidth = Dimensions.get('window').width;
 const ProfileDetails = ({name, country, birthday, sector, language, currency}) => {
   if (name == "Travers Millard" || name == "Dupuis Louis") {
     return (
-    
-    
-      <View style={{alignItems: "center", marginTop: windowHeight/8}}>
-          <Icon name="person-circle-outline" style={{fontSize: 160, color: 'green'}} /> 
-          <Text style={{fontWeight: "bold" }}>{name}</Text>
-          <Text>{country}</Text>
-          <Text>Birthday: {birthday}</Text>
-          <Text>{sector} sector</Text>
-          <Text>Language: {language}</Text>
-          <Text>Reporting Currency: {currency}</Text>
+    <Container>
+      <View style={{alignSelf: 'center', marginTop: windowHeight/35, }}>
+        <Icon name="person-circle-outline" style={{fontSize: 160, color: 'green'}}  /> 
+      </View>
+      <View style={{alignItems: "center", backgroundColor: "lightgray", borderRadius: 20, width: windowWidth/1.5, alignSelf: "center"}}>
+          
+          <Text style={{fontWeight: "bold", marginTop: 10, fontSize: 18  }}>{name}</Text>
+          <Text style={{fontSize: 16}}>{country}</Text>
+          <Text style={{fontSize: 16}}>Birthday: {birthday}</Text>
+          <Text style={{fontSize: 16}}>{sector} sector</Text>
+          <Text style={{fontSize: 16}}>Language: {language}</Text>
+          <Text style={{marginBottom: 10, fontSize: 16}}>Reporting Currency: {currency}</Text>
       </View>    
-      
+    </Container> 
     )
   } else{
     return (    
-      <View style={{alignItems: "center", marginTop: windowHeight/8}}>
-          <Icon name="person-circle-outline" style={{fontSize: 160, color: 'gray'}} /> 
-          <Text style={{fontWeight: "bold" }}>{name}</Text>
-          <Text>{country}</Text>
-          <Text>Birthday: {birthday}</Text>
-          <Text>{sector} sector</Text>
-          <Text>Language: {language}</Text>
-          <Text>Reporting Currency: {currency}</Text>
-      </View>
 
+      <Container>
+      <View style={{alignSelf: 'center', marginTop: windowHeight/35, }}>
+        <Icon name="person-circle-outline" style={{fontSize: 160, color: 'gray'}} /> 
+      </View>
+      <View style={{alignItems: "center", 
+                      backgroundColor: "lightgray", borderRadius: 20, width: windowWidth/1.5, alignSelf: "center"}}>
+          
+          <Text style={{fontWeight: "bold", marginTop: 10, fontSize: 18 }}>{name}</Text>
+          <Text style={{fontSize: 16}}>{country}</Text>
+          <Text style={{fontSize: 16}}>Birthday: {birthday}</Text>
+          <Text style={{fontSize: 16}}>{sector} sector</Text>
+          <Text style={{fontSize: 16}}>Language: {language}</Text>
+          <Text style={{marginBottom: 10, fontSize: 16}}>Reporting Currency: {currency}</Text>
+      </View>
+      </Container>
     )
   }
   

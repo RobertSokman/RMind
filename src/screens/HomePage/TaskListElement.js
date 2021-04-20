@@ -6,9 +6,8 @@ const windowWidth = Dimensions.get('window').width;
 const TaskListElement = (props) => {
     const reminder = props.reminder;
     return (
-      <View  >
-          <Text style={styles.security}>{reminder.description}</Text>
-          
+      <View >
+          <Text style={styles.security}>{reminder.description}</Text>  
       </View>
     )
   }
@@ -19,10 +18,10 @@ const styles = StyleSheet.create({
 
   security: {
     fontSize: 16,
-    //justifyContent: 'center',
     flex: 2,
     marginBottom:15,
     marginLeft: 10,
+    marginTop: 15
   },
   
 });

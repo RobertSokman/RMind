@@ -1,7 +1,11 @@
 import React, { Component} from 'react';
-import { Container, Header, Content, List, ListItem, Separator,Icon, Form, Picker, Radio, Right, Left, Label, Title } from 'native-base';
-import { Pressable, View ,  StyleSheet, Text, SafeAreaView, TouchableOpacity, Linking, ImageBackground, Image, NativeModules, Platform, TouchableHighlight} from 'react-native';
+import { Container, Header, Content, List, ListItem, Separator,Icon, Form, Picker, Radio, Right, Left, Label, Title} from 'native-base';
+import { Pressable, View ,  StyleSheet, Text, SafeAreaView, TouchableOpacity, Linking, 
+  ImageBackground, Image, NativeModules, Platform, TouchableHighlight, Dimensions } from 'react-native';
 import SignOutButton from './SignOutButton';
+const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
+
  
 const { RNAndroidOpenSettings } = NativeModules;
 
@@ -33,7 +37,7 @@ return (
 <Title style={{ textAlign: "center", marginTop:10, color:"white"}}>Settings</Title>
 </Header>
 <Content>
-<View style={{flexDirection: 'row', textAlign: 'left', fontSize: 15, backgroundColor:"white", height:107}}>
+<View style={{flexDirection: 'row', textAlign: 'left', fontSize: 15, backgroundColor:"white", height:107, width: windowWidth/2}}>
     <Image source={{uri: 'https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-studio-shot-of-modern-hipster-businessman-isolated-on-white-background_HAbEwEn-W_thumb.jpg'}}style={{width:90, height: 90, borderRadius:70,borderWidth:1,borderColor:"white",  marginTop:10, margin:30}} />
     <View>
      <Text style={{fontWeight:"300", marginTop:30, fontSize:30}}>

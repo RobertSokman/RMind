@@ -1,15 +1,17 @@
 import React, { Component, useState } from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ImageBackground} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, ImageBackground, Dimensions} from 'react-native';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon, Separator } from 'native-base';
 import Todaytasks from '../../elements/Homescreen/Todaytasks';
 import TaskList from './TaskList';
 import { color } from 'react-native-reanimated';
 import SegmentedControlTab from 'react-native-segmented-control-tab';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
  
 const Screen1 = () => {
   return (
       <Container>
-        <View>
+        <View style={{flex: 1}}>
           <Header style={{height: 64, backgroundColor: '#003662'}}>
             <Image
               style={styles.logo}
@@ -23,7 +25,7 @@ const Screen1 = () => {
                    <Text style = {[styles.textStyle, {paddingTop: 10}]}> Welcome Back</Text>
                    <Image source= {{uri:'https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-studio-shot-of-modern-hipster-businessman-isolated-on-white-background_HAbEwEn-W_thumb.jpg'}}
                        style={styles.avatarStyle}/>
-                   <Text style = {styles.textStyle} > Joe Bloggs </Text>
+                   <Text style = {styles.nameTextStyle}> Joe Bloggs </Text>
                    <Text></Text>
                    </View>
            </ImageBackground>
@@ -48,25 +50,33 @@ const styles = StyleSheet.create({
    marginBottom: 10,
  },
  container: {
- 
+    height: windowHeight/3.5
  },           
  overlay: {
      backgroundColor:'rgba(1,0,0,0.2)',
+     height: windowHeight/3.5
  },
      avatarStyle: {
-         width:100,
-         height: 100,
-         marginTop: 10,
-         borderRadius: 50,
+         width: windowWidth/3,
+         height: windowHeight/6,
+         borderRadius: 90,
          alignSelf: 'center',
+         marginTop: windowHeight/50,
      },
      textStyle: {
-         marginTop: 10,
-         fontSize: 18,
-         color: "#FFFFFF",
-         fontWeight: '300',
-         alignSelf: 'center',
+         
          fontSize: 20,
+         color: "white",
+         
+         fontWeight: 'bold',
+         alignSelf: 'center',
+     },
+        nameTextStyle:{
+          fontSize: 20,
+          color: "white",
+          fontWeight: 'bold',
+          alignSelf: 'center',
+          marginTop: windowHeight/50,
      },
      cardTittle:{
            color:"#063970",

@@ -37,9 +37,11 @@ const TaskList = (props) => {
 
     return (
       <View style={{flex: 1}}>
-        <Text style={{height: 25, textAlign: "center", marginTop: 10}}>{date2}</Text>
-        
+        <Text style={{height: 25, textAlign: "center", marginTop: 10, color: '#003662'}}>Today is {date2}</Text>
+        <Text style={{height: 25, textAlign: "center", marginTop: 10, fontWeight:'bold', color: '#003662', 
+                        fontSize: 18, marginBottom: 10}}>YOUR TASKS:</Text>
         <FlatList 
+            style={{backgroundColor: 'lightgray', borderRadius: 20, width: windowWidth/1.2, flexGrow: 0, alignSelf: 'center'}}
             data={reminders}
             renderItem={({item}) => 
             
