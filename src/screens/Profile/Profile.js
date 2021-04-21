@@ -17,7 +17,7 @@ const Profile = ({route}) => {
       <ProfileDetails name = {name + " " + surname } country= {country} birthday={birthday} sector={sector} language={language} 
         currency = {currency}/>
       
-      <View style={{marginTop: windowHeight/14, marginLeft: windowWidth/14}}>
+      <View style={{marginTop: windowHeight/7, marginLeft: windowWidth/14}}>
         <Text style={{fontWeight: "bold"}}>Portfolios: </Text>
       </View>
       <SafeAreaView style={{flex: 1}}>

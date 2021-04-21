@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Header, Content, List, ListItem, Text } from 'native-base';
+import { Container, Header, Content, List, ListItem, Text, Left } from 'native-base';
 import { Dimensions, View, FlatList, SafeAreaView } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -36,12 +36,12 @@ const TaskList = (props) => {
     }, [])
 
     return (
-      <View style={{flex: 1}}>
-        <Text style={{height: 25, textAlign: "center", marginTop: 10, color: '#003662'}}>Today is {date2}</Text>
-        <Text style={{height: 25, textAlign: "center", marginTop: 10, fontWeight:'bold', color: '#003662', 
-                        fontSize: 18, marginBottom: 10}}>YOUR TASKS:</Text>
+      <View style={{flex: 1, backgroundColor: 'rgba(1,0,0,0.5)', borderRadius: 30, width: windowWidth-10, alignSelf: 'center'}}>
+        
+        <Text style={{height: 25, textAlign: "center", marginTop: 10, fontWeight:'bold', color: 'white', 
+                        fontSize: 18, marginBottom: 10, textAlign: 'left', marginLeft:windowWidth/22}}>YOUR TASKS:</Text>
         <FlatList 
-            style={{backgroundColor: 'lightgray', borderRadius: 20, width: windowWidth/1.2, flexGrow: 0, alignSelf: 'center'}}
+            style={{ borderRadius: 5, width: windowWidth/1.05, flexGrow: 0, alignSelf: 'center'}}
             data={reminders}
             renderItem={({item}) => 
             
@@ -50,6 +50,8 @@ const TaskList = (props) => {
             }
           
         />
+
+        <Text style={{height: 25, textAlign: 'right', marginRight: 15, marginTop: windowHeight/4, color: 'white'}}>Today is {date2}</Text>      
         
       </View>   
     ) 

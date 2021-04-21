@@ -51,12 +51,14 @@ const FullList = (props) => {
         <View>
 
             <TextInput
-            placeholder="Type Here..."
+            placeholder="search"
             value={inputText}
             onChangeText={setInputText}
-            style={{color: 'black'}}
+            style={{color: 'black', width: windowWidth/1.2, backgroundColor: 'lightgray', height: windowHeight/18, 
+                        borderRadius: 20, alignSelf: 'center', textAlign: 'center'}}
             />
             <FlatList 
+                style={{flex: 0}}
                 data={securities}
                 renderItem={({item}) => 
                 <Pressable onPress={() => navigation.navigate("Security", {name: item.company, code: item.securityCode, currency: item.currency, 

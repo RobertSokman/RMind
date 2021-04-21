@@ -73,7 +73,7 @@ mode="dropdown"
 iosIcon={<Icon name=""/>}
 headerStyle={{ backgroundColor: "#003662", fontWeight:"300"}}
 headerBackButtonTextStyle={{ color: "white", fontWeight:"300"}}
-headerTitleStyle={{ color: "white", fontWeight:"300"}}
+headerTitleStyle={{ color: "white", fontWeight:"bold"}}
 selectedValue={this.state.selected}
 onValueChange={this.onValueChange.bind(this)}
 >

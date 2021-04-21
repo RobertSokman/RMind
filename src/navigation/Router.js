@@ -55,27 +55,69 @@ const Router = () => {
                 <Stack.Screen 
                     name={"Security"}
                     component={ OneStock }
-                    options={{headerShown: true,}}
+                    options={{headerShown: true,
+                            headerStyle: {
+                            backgroundColor: '#003662',
+    
+                            },
+                            headerTitleStyle: {
+                                color: 'white',
+                            },
+                            headerTintColor: '#fff',}}
                 />              
                <Stack.Screen 
                     name={"Add Reminder"}
                     component={ AddReminder }
-                    options={{headerShown: true,}}
+                    options={{
+                        headerShown: true, 
+                        headerStyle: {
+                        backgroundColor: '#003662',
+
+                        },
+                        headerTitleStyle: {
+                            color: 'white',
+                        },
+                        headerTintColor: '#fff',
+                    }}
                 />
                 <Stack.Screen 
                     name={"Profile"}
                     component={ Profile }
-                    options={{headerShown: true,}}
+                    options={{headerShown: true,
+                        headerStyle: {
+                        backgroundColor: '#003662',
+
+                        },
+                        headerTitleStyle: {
+                            color: 'white',
+                        },
+                        headerTintColor: '#fff',}}
                 />  
                 <Stack.Screen 
                     name={"Portfolio"}
                     component={ Portfolio }
-                    options={{headerShown: true,}}
+                    options={{headerShown: true,
+                            headerStyle: {
+                            backgroundColor: '#003662',
+    
+                            },
+                            headerTitleStyle: {
+                                color: 'white',
+                            },
+                            headerTintColor: '#fff',}}
                 /> 
                 <Stack.Screen 
                     name={"Trading History"}
                     component={ TradingHistory }
-                    options={{headerShown: true,}}
+                    options={{headerShown: true,
+                            headerStyle: {
+                            backgroundColor: '#003662',
+    
+                            },
+                            headerTitleStyle: {
+                                color: 'white',
+                            },
+                            headerTintColor: '#fff',}}
                 /> 
             </Stack.Navigator>
         </NavigationContainer>

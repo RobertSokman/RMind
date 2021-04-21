@@ -38,9 +38,9 @@ const AddReminder = (props) => {
 
  
     
-      <Title style={{textAlign:"left", fontWeight:"300"}}> Reminder Name</Title>
+      <Title style={{textAlign:"left", fontWeight: 'normal'}}> Reminder Name</Title>
      
-          <Item regular>
+          <Item regular style={{width: windowWidth-10, alignSelf: 'center'}}>
             <Input
             style={{fontWeight:'200', fontSize:14}}
             placeholder='Name of the Reminder'
@@ -52,8 +52,8 @@ const AddReminder = (props) => {
           <Text></Text>
     
         
-      <Title style={{textAlign:"left", fontWeight:'300'}}>Reminder Date</Title>
-        <Item regular>
+      <Title style={{textAlign:"left", fontWeight: 'normal'}}>Reminder Date</Title>
+        <Item regular style={{width: windowWidth-10, alignSelf: 'center'}}>
          <Input
          style={{fontWeight:"200", fontSize:14}}
          value={value2}
@@ -64,9 +64,9 @@ const AddReminder = (props) => {
          </Item>
          <Text></Text>
    
-      <Title style={{textAlign:"left", fontWeight:"300"}}>Reminder Description</Title>
+      <Title style={{textAlign:"left", fontWeight: 'normal'}}>Reminder Description</Title>
     
-          <Form>
+          <Form style={{width: windowWidth-10, alignSelf: 'center'}}>
             <Textarea style={{fontWeight:"200", fontSize:"15",}} rowSpan={5} bordered placeholder="Please Enter The Description Of Your Reminder" />
           </Form>
           <Text></Text>

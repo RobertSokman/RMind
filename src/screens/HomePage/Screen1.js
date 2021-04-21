@@ -10,7 +10,10 @@ const windowHeight = Dimensions.get('window').height;
  
 const Screen1 = () => {
   return (
-      <Container>
+      <Container >
+        <ImageBackground
+               source={{uri:'https://extensionarchitecture.co.uk/wp-content/uploads/2017/07/Banner-Canary-Wharf.jpg'}}
+               style={styles.container}>
         <View style={{flex: 1}}>
           <Header style={{height: 64, backgroundColor: '#003662'}}>
             <Image
@@ -18,9 +21,7 @@ const Screen1 = () => {
               source={require('../../../assets/Logo5.png')}
             />
           </Header>
-          <ImageBackground
-               source={{uri:'https://extensionarchitecture.co.uk/wp-content/uploads/2017/07/Banner-Canary-Wharf.jpg'}}
-               style={styles.container}>
+          
                    <View style={styles.overlay}>
                    <Text style = {[styles.textStyle, {paddingTop: 10}]}> Welcome Back</Text>
                    <Image source= {{uri:'https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/image/rDtN98Qoishumwih/graphicstock-studio-shot-of-modern-hipster-businessman-isolated-on-white-background_HAbEwEn-W_thumb.jpg'}}
@@ -28,12 +29,14 @@ const Screen1 = () => {
                    <Text style = {styles.nameTextStyle}> Joe Bloggs </Text>
                    <Text></Text>
                    </View>
-           </ImageBackground>
+                   
+           
         
-        <SafeAreaView style={{flex: 1}}>
+        <SafeAreaView style={{flex: 1,backgroundColor:'rgba(1,0,0,0.3)'}}>
           <TaskList/>
         </SafeAreaView>
         </View>
+        </ImageBackground>
       </Container>
   )
 }
@@ -50,15 +53,16 @@ const styles = StyleSheet.create({
    marginBottom: 10,
  },
  container: {
-    height: windowHeight/3.5
+    height: windowHeight/1,
+    width: windowWidth,
  },           
  overlay: {
-     backgroundColor:'rgba(1,0,0,0.2)',
+     backgroundColor:'rgba(1,0,0,0.3)',
      height: windowHeight/3.5
  },
      avatarStyle: {
-         width: windowWidth/3,
-         height: windowHeight/6,
+         width: windowWidth/4,
+         height: windowHeight/7,
          borderRadius: 90,
          alignSelf: 'center',
          marginTop: windowHeight/50,

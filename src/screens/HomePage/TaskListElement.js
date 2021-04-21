@@ -7,6 +7,7 @@ const TaskListElement = (props) => {
     const reminder = props.reminder;
     return (
       <View >
+          
           <Text style={styles.security}>{reminder.description}</Text>  
       </View>
     )
@@ -19,9 +20,11 @@ const styles = StyleSheet.create({
   security: {
     fontSize: 16,
     flex: 2,
-    marginBottom:15,
+    marginBottom:5,
     marginLeft: 10,
-    marginTop: 15
+    marginTop: 5,
+    fontWeight: "300",
+    color: 'white',
   },
   
 });
