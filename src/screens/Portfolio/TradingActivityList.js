@@ -31,8 +31,7 @@ const TradingActivityList = ( {parentPortfolio}) => {
     }, [])
     return (
         <View>
-            <Text style={{textAlign: 'center', fontSize: 18, fontWeight: 'bold', backgroundColor: 'white', 
-            height: windowHeight/22, color: '#003662', alignContent:'center', marginTop: 10}}>Trading Activity history:</Text>
+            
             <FlatList 
                 style={{marginTop: 5}}
                 data={trades}

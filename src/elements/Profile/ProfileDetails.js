@@ -8,13 +8,14 @@ const windowWidth = Dimensions.get('window').width;
 
 
 const ProfileDetails = ({name, country, birthday, sector, language, currency}) => {
-  if (name == "Travers Millard" || name == "Dupuis Louis") {
+  if (name == "Millard Travers" || name == "Louis Dupuis") {
     return (
-    <Container>
-      <View style={{alignSelf: 'center', marginTop: windowHeight/35, }}>
+    <Container style={{marginTop: 30}}>
+      <View style={{alignSelf: 'center', }}>
         <Icon name="person-circle-outline" style={{fontSize: 160, color: 'green'}}  /> 
       </View>
-      <View style={{alignItems: "center", backgroundColor: "lightgray", borderRadius: 20, width: windowWidth/1.5, alignSelf: "center"}}>
+      <View style={{alignItems: "center", backgroundColor: "lightgray", borderRadius: 20, width: windowWidth/1.5, 
+      alignSelf: "center"}}>
           
           <Text style={{fontWeight: "bold", marginTop: 10, fontSize: 18  }}>{name}</Text>
           <Text style={{fontSize: 16}}>{country}</Text>

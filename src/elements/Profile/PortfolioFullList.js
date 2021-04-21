@@ -33,6 +33,7 @@ const PortfolioFullList = ( {owner} ) => {
     return (
         <View >
             <FlatList
+            
                 data={portfolios}
 
                 renderItem={({ item }) =>

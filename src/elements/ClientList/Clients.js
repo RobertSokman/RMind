@@ -9,7 +9,7 @@ const ClientName = (props) => {
     return (
       <View style={{marginLeft: 10, flexDirection: "row", alignItems: 'center', height: windowHeight/10}}>
          
-        <Text style={{textAlign: "center", fontSize: 18, fontWeight: "bold"}}>{client.name} {client.surname}</Text>
+        <Text style={{textAlign: "center", fontSize: 18, fontWeight: "bold"}}>{client.surname} {client.name} </Text>
       </View>
     )
   }

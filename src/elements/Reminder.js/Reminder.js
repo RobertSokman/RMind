@@ -41,11 +41,7 @@ const Reminder = (props) => {
     return (
       <View style={{flexDirection: 'row', borderColor: 'lightgray', borderBottomWidth: 0.5}} >
           <Text style={styles.security}>{reminder.description}</Text>
-          <Pressable 
-              style={{alignSelf: 'center', marginRight: windowWidth/30}}
-              onPress= {deleteDescription}>
-            <MaterialIcons name="done" size={25} color={'red'} /> 
-          </Pressable>
+          
       </View>
     )
   }
