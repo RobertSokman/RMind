@@ -21,7 +21,7 @@ const TaskList = (props) => {
     const date1= year + '-' + month + '-' + date;
     const date2= date + '.' + month + '.' + year;
 
-    useEffect(() => {
+    //useEffect(() => {
         const fetchClients = async () => {
             try {
                 const remindersResult = await API.graphql(
@@ -33,10 +33,10 @@ const TaskList = (props) => {
             }
         }
         fetchClients();
-    }, [])
+    //}, [])
 
     return (
-      <View style={{flex: 1, backgroundColor: 'rgba(1,0,0,0.5)', borderRadius: 30, width: windowWidth-10, alignSelf: 'center'}}>
+      <View style={{flex: 1, backgroundColor: 'rgba(1,0,0,0.5)', borderRadius: 30, width: windowWidth, alignSelf: 'center'}}>
         
         <Text style={{height: 25, textAlign: "center", marginTop: 10, fontWeight:'bold', color: 'white', 
                         fontSize: 18, marginBottom: 10, textAlign: 'left', marginLeft:windowWidth/22}}>YOUR TASKS:</Text>

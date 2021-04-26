@@ -13,7 +13,7 @@ const TabOne = (props) => {
     const navigation = useNavigation();
     const [reminders, setReminders] = useState([]);
 
-    useEffect(() => {
+    //useEffect(() => {
         const fetchClients = async () => {
             try {
                 const remindersResult = await API.graphql(
@@ -25,7 +25,7 @@ const TabOne = (props) => {
             }
         }
         fetchClients();
-    }, [])
+    //}, [])
 
 
     return (

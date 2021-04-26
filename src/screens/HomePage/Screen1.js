@@ -32,7 +32,7 @@ const Screen1 = () => {
                    
            
         
-        <SafeAreaView style={{flex: 1,backgroundColor:'rgba(1,0,0,0.3)'}}>
+        <SafeAreaView style={{flex: 1,backgroundColor:'rgba(1,0,0,0.5)'}}>
           <TaskList/>
         </SafeAreaView>
         </View>

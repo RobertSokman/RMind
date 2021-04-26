@@ -22,7 +22,7 @@ openAppSettings = () => {
 constructor(props) {
 super(props);
 this.state = {
-selected: "key2"
+selected: "key1"
 };
 }
 onValueChange(value: string) {

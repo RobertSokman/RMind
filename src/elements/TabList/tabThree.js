@@ -21,7 +21,7 @@ const TabThree = (props) => {
     const date1= year + '-' + month + '-' + date;
     const date2= date + '.' + month + '.' + year;
 
-    useEffect(() => {
+    //useEffect(() => {
         const fetchClients = async () => {
             try {
                 const remindersResult = await API.graphql(
@@ -33,7 +33,7 @@ const TabThree = (props) => {
             }
         }
         fetchClients();
-    }, [])
+    //}, [])
 
     return (
       <View style={{flex: 1}}>

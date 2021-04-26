@@ -18,6 +18,7 @@ const OneStock = ({route}) => {
         
           <OneSecurity name={name} code={code} price={price5} currency={currency}/>
           <LineChart
+            
             data={{
               labels: [date1, date2, date3, date4, date5],
               datasets: [
@@ -33,9 +34,9 @@ const OneStock = ({route}) => {
               ]
             }}
             width={windowWidth}
-            height={250}
-            //yAxisLabel="$"
-            yAxisSuffix="k"
+            height={windowWidth}
+            yAxisLabel="$"
+            //yAxisSuffix="k"
             
             chartConfig={{
               backgroundColor: "white",
@@ -56,7 +57,7 @@ const OneStock = ({route}) => {
             style={{
                 marginVertical: 8,
                 borderRadius: 16,
-                marginTop: 20
+                marginTop: windowHeight/8
             }}
             
           
