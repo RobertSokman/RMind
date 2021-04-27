@@ -45,7 +45,7 @@ const ClientListItem = (props) => {
                     height: windowHeight/25, borderRadius: 10, backgroundColor: '#003f5c', alignSelf:'center', marginRight: 10}}
                 >
                     
-                    <Text style={{textAlign: 'center', color: 'white', marginTop: 5}}>View</Text>
+                    <Text style={{textAlign: 'center', color: 'white', marginTop: 2}}>View</Text>
                     
                 </Pressable>
                 </View>

@@ -6,6 +6,7 @@ import BottomTabNavigator from "../../navigation/BottomTabNavigator";
 import securities from "../../../assets/data/securities";
 import OneSecurity from "../../elements/OneSecurity";
 import { LineChart } from "react-native-chart-kit";
+import { colors } from "react-native-elements";
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 
@@ -36,16 +37,21 @@ const OneStock = ({route}) => {
             width={windowWidth}
             height={windowWidth}
             yAxisLabel="$"
-            //yAxisSuffix="k"
+            verticalLabelRotation={-25}
+            fromZero
             
+            
+
             chartConfig={{
               backgroundColor: "white",
               backgroundGradientFrom: "white",
               backgroundGradientTo: "white",
               color: (opacity = 1) => `rgba(50, 99, 151, ${opacity})`,
               labelColor: (opacity = 1) => `rgba(25, 25, 25, ${opacity})`,
+              
               style: {
-                borderRadius: 16
+                borderRadius: 16,
+                
               },
               ropsForDots: {
                 r: "6",
@@ -57,7 +63,8 @@ const OneStock = ({route}) => {
             style={{
                 marginVertical: 8,
                 borderRadius: 16,
-                marginTop: windowHeight/8
+                marginTop: windowHeight/10
+                
             }}
             
           

@@ -9,24 +9,25 @@ import { Icon, Item } from "native-base";
 import { API, graphqlOperation } from "aws-amplify";
 import { listSecuritys } from "../../graphql/queries";
 import { TextInput } from "react-native";
+import { PureComponent } from "react/cjs/react.development";
 
-const FullList = (props) => {
+const FullList  = (props) => {
+    
+    
+    
     const navigation = useNavigation();
 
-    //const lala = this.setState({ 
-    //    refresh: !this.state.refresh
-    //})
-
+  
     const [securities, setSecurities] = useState([]);
     const [inputText, setInputText] = useState('');
 
-    /*const FetchDataPut = () => */useEffect(() => {
-        //if (inputText == '')
-        //{
-            const fetchClients1 = async () => {
+    useEffect(() => {
+        
+            const fetchClients1 = 
+            async () => {
                 try {
                     const securitiesResult = await API.graphql(
-                        graphqlOperation(listSecuritys, { limit: 1000} )
+                        graphqlOperation(listSecuritys, { limit: 300} )
                         )
                     setSecurities(securitiesResult.data.listSecuritys.items);
                 } catch (e) {
@@ -34,15 +35,14 @@ const FullList = (props) => {
                 }
             }
             fetchClients1();
-       // }
+       
     }
-    ,[]) 
-        //else
-        //{
-        const fetchClients = async () => {
+    ,[])
+        
+    const fetchClients = async () => {
             try {
                 const securitiesResult = await API.graphql(
-                    graphqlOperation(listSecuritys, {filter: { company: { contains: inputText }}})
+                    graphqlOperation(listSecuritys, {filter: { company: { contains: inputText }}}, { limit: 300})
                     )
                 setSecurities(securitiesResult.data.listSecuritys.items);
             } catch (e) {
@@ -51,8 +51,7 @@ const FullList = (props) => {
         }
     
         fetchClients();//}
-    //}
-    //,[])
+    
 
     return (
         <View>
