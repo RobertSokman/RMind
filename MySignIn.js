@@ -27,18 +27,27 @@ import { useEffect } from 'react/cjs/react.development';
             console.log('error signing in', error);
         }
       }
+
+      
       
       return(
         
         <Container>
           <View>
             <ImageBackground source={require('./assets/skyline.jpeg')} style={{width: windowWidth, height: windowHeight+20}}>
+              
               <Image
-                style={{width: windowWidth, height: windowHeight/8, marginTop: windowHeight/10}}
+                style={{width: windowWidth/1.6, height: windowHeight/12, marginTop: windowHeight/10, alignSelf: 'center'}}
                 source={require('./assets/Logo.png')}
               />
+              <Image
+                style={{width: windowWidth/1.6, height: windowHeight/12,  alignSelf: 'center', marginRight: windowWidth/10}}
+                source={require('./assets/Rmind2.png')}
+              />
               
-              <View style={{marginTop: windowHeight/3}}>
+              
+                           
+              <View style={{marginTop: windowHeight/3.5}}>
               <View style={styles.inputView}>
               <TextInput  
                 style={styles.inputText}
@@ -121,3 +130,15 @@ import { useEffect } from 'react/cjs/react.development';
     }
   });
   
+
+  /*
+              <Image
+                style={{width: windowWidth/1.6, height: windowHeight/12, marginTop: windowHeight/8, alignSelf: 'center'}}
+                source={require('./assets/Logo.png')}
+              />
+              <Image
+                style={{width: windowWidth/2.75, height: windowHeight/5,  alignSelf: 'center', marginTop: windowHeight/15}}
+                source={require('./assets/RMind.png')}
+              />
+
+  */

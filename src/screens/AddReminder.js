@@ -65,13 +65,7 @@ const AddReminder = (props) => {
          </Item>
          <Text></Text>
    
-      <Title style={{textAlign:"left", fontWeight: 'normal', marginTop: 10, marginLeft: 7, marginBottom: 5}}>Reminder Description</Title>
-    
-          <Form style={{width: windowWidth-20, alignSelf: 'center'}}>
-            <Textarea style={{fontWeight:"200", fontSize:"15",}} rowSpan={5} bordered placeholder="Please Enter The Description Of Your Reminder" />
-          </Form>
-          <Text></Text>
-  
+      
   
           <Card style={{width:135, alignSelf:"center"}}>
             <CardItem header button style onPress= { buttonPress }>

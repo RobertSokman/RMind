@@ -61,30 +61,11 @@ return (
 </ListItem>
 <ListItem last>
 <Text style={{fontWeight:"600", fontSize:16}}>Relationship Manager ID:</Text>
-<Text style={{ fontWeight:"400", fontSize:16}}> 1234567</Text>
+<Text style={{ fontWeight:"400", fontSize:16}}> 2781</Text>
 </ListItem>
+
 <Separator bordered>
-<Text style={{ marginBottom:-4, fontWeight:"400"}}>SELECT NOTIFIATION FREQUENCY</Text>
-</Separator>
- 
-<Form >
-<Picker
-mode="dropdown"
-iosIcon={<Icon name=""/>}
-headerStyle={{ backgroundColor: "#003662", fontWeight:"300"}}
-headerBackButtonTextStyle={{ color: "white", fontWeight:"300"}}
-headerTitleStyle={{ color: "white", fontWeight:"bold"}}
-selectedValue={this.state.selected}
-onValueChange={this.onValueChange.bind(this)}
->
-<Picker.Item label="Hourly" value="key0" />
-<Picker.Item label="Daily" value="key1" />
-<Picker.Item label="Weekly" value="key2" />
-<Picker.Item label="Monthly" value="key3" />
-<Picker.Item label="Never" value="key4" />
-</Picker>
-</Form>
-<Separator bordered>
+
 <Text style={{ marginBottom:-4, fontWeight:"400"}}>USER OPTIONS</Text>
 </Separator>
 <ListItem>
@@ -132,3 +113,28 @@ const styles = StyleSheet.create({
     fontWeight:"400"
   },
 });
+
+/*
+<Separator bordered>
+<Text style={{ marginBottom:-4, fontWeight:"400"}}>SELECT NOTIFIATION FREQUENCY</Text>
+</Separator>
+ 
+<Form >
+<Picker
+mode="dropdown"
+iosIcon={<Icon name=""/>}
+headerStyle={{ backgroundColor: "#003662", fontWeight:"300"}}
+headerBackButtonTextStyle={{ color: "white", fontWeight:"300"}}
+headerTitleStyle={{ color: "white", fontWeight:"bold"}}
+selectedValue={this.state.selected}
+onValueChange={this.onValueChange.bind(this)}
+>
+<Picker.Item label="Hourly" value="key0" />
+<Picker.Item label="Daily" value="key1" />
+<Picker.Item label="Weekly" value="key2" />
+<Picker.Item label="Monthly" value="key3" />
+<Picker.Item label="Never" value="key4" />
+</Picker>
+</Form>
+
+*/
