@@ -36,7 +36,7 @@ const OneStock = ({route}) => {
             }}
             width={windowWidth}
             height={windowWidth}
-            yAxisLabel="$"
+            yAxisLabel="£"
             verticalLabelRotation={-25}
             fromZero
             

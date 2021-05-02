@@ -27,7 +27,7 @@ const FullList  = (props) => {
             async () => {
                 try {
                     const securitiesResult = await API.graphql(
-                        graphqlOperation(listSecuritys, { limit: 300} )
+                        graphqlOperation(listSecuritys, { limit: 100} )
                         )
                     setSecurities(securitiesResult.data.listSecuritys.items);
                 } catch (e) {
@@ -42,7 +42,7 @@ const FullList  = (props) => {
     const fetchClients = async () => {
             try {
                 const securitiesResult = await API.graphql(
-                    graphqlOperation(listSecuritys, {filter: { company: { contains: inputText }}}, { limit: 300})
+                    graphqlOperation(listSecuritys, {filter: { company: { contains: inputText }}}, { limit: 100})
                     )
                 setSecurities(securitiesResult.data.listSecuritys.items);
             } catch (e) {

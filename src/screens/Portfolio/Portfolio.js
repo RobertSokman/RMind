@@ -16,7 +16,7 @@ const Portfolio = ({route}) => {
     <Container>
       <View style={{alignItems: "center", marginTop: windowHeight/40, marginBottom:10}}>
           <Text style={{fontWeight:"bold", fontSize: 18 , color:"black"}}>Portfolio ID: {pid}</Text>
-          <Text style={{fontWeight:"bold", fontSize: 18, color:"black"}}>Value: {initialValue} $</Text>
+          <Text style={{fontWeight:"bold", fontSize: 18, color:"black"}}>Value: {initialValue} £</Text>
       </View>
       
       <SafeAreaView style={{ marginTop: 0, flex:1}}>

@@ -766,3 +766,36 @@ export const onDeleteMySecurity = /* GraphQL */ `
     }
   }
 `;
+export const onCreateNote = /* GraphQL */ `
+  subscription OnCreateNote {
+    onCreateNote {
+      id
+      text
+      owner
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateNote = /* GraphQL */ `
+  subscription OnUpdateNote {
+    onUpdateNote {
+      id
+      text
+      owner
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteNote = /* GraphQL */ `
+  subscription OnDeleteNote {
+    onDeleteNote {
+      id
+      text
+      owner
+      createdAt
+      updatedAt
+    }
+  }
+`;

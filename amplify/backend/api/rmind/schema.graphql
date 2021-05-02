@@ -87,3 +87,9 @@ type MySecurity @model {
   type: String
   company: String
 }
+
+type Note @model {
+  id : ID
+  text: String
+  owner: Int
+}

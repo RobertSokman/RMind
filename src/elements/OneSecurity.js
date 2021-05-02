@@ -11,7 +11,7 @@ const Onesecurity = ({name, code, price, currency}) =>
       <Text style={{fontSize: 18,  textAlign: "center",color: '#003662', alignSelf: "center", fontWeight: "bold", marginTop: 10}}>{name}</Text>
       <Text style={{fontSize: 18,  textAlign: "center",color: "black", alignSelf: "center",}}>Security code: {code}</Text>
       <Text style={{fontSize: 18,  textAlign: "center",color: "black", alignSelf: "center"}}>Trading currency: {currency}</Text>
-      <Text style={{textAlign: "center", fontSize: 18, marginTop: 20, marginBottom: 10}}>Current price: {price} $</Text>
+      <Text style={{textAlign: "center", fontSize: 18, marginTop: 20, marginBottom: 10}}>Current price: {price} £</Text>
      </View>
      
   </View>
