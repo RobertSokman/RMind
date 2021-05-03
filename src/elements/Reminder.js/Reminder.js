@@ -41,7 +41,7 @@ const Reminder = (props) => {
 
     const buttonPress = () => 
       //newDescription();
-      Alert.alert("Task completed", "Are you sure, you want to delete this reminder?",
+      Alert.alert("Task completed", "Are you sure you want to delete this reminder?",
       [
         {
           text: "Cancel",
